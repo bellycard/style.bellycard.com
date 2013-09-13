@@ -8,7 +8,7 @@ gem "middleman", "~>3.1.3"
 gem "middleman-livereload", "~> 3.1.0"
 
 # GitHub pages
-gem "middleman-gh-pages"
+gem "middleman-gh-pages", "0.0.2"
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
