@@ -10,6 +10,9 @@ gem "middleman-livereload", "~> 3.1.0"
 # GitHub pages
 gem "middleman-gh-pages", :git => "git@github.com:neo/middleman-gh-pages.git"
 
+# Belly style rolodex
+gem "rolodex", :git => "git@github.com:bellycard/rolodex.git"
+
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
 

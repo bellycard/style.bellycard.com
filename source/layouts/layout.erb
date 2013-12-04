@@ -9,11 +9,11 @@
 
     <title><%= current_page.data.title || "Style" %></title>
 
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Open+Sans:400italic,400,300,600">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Open+Sans:300,400italic,400,600,600italic">
     <script src="/assets/js/vendor/modernizr-2.6.2.min.js"></script>
 
-    <%= partial "partials/google-analytics" %>
+    <%= partial "partials/utilities/google-analytics" %>
 
   </head>
 
@@ -25,6 +25,8 @@
     <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
     <script src="/assets/js/main.js"></script>
+
+    <%= partial "partials/utilities/jquery-grid" %>
 
   </body>
 </html>
