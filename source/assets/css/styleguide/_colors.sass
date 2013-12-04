@@ -1,0 +1,65 @@
+// Colors
+// ========================================
+
+.sg-colors
+  @extend .margin-bottom
+
+  ul
+    @extend .grid-col
+    @extend .grid-one-third
+
+.sg-color,
+.sg-color-alt
+  @extend .list-none
+  @extend .margin-0
+  @extend .pad-box
+
+.sg-color,
+.sg-color .sg-color-value
+  @extend %color-white
+
+.sg-color-alt .sg-color-value
+  @extend %color-black
+
+.sg-color-value
+  @extend .pull-right
+
+// ========================================
+// Primary blue
+
+.sg-color-brand-blue
+  @extend %background-brand-blue
+
+// ========================================
+// Brand blues
+
+.sg-color-brand-blue-dark
+  @extend %background-brand-blue-dark
+.sg-color-brand-blue-light
+  @extend %background-brand-blue-light
+
+// ========================================
+// Brand colors
+
+.sg-color-brand-green
+  @extend %background-brand-green
+.sg-color-brand-orange
+  @extend %background-brand-orange
+.sg-color-brand-yellow
+  @extend %background-brand-yellow
+
+// ========================================
+// Monochromatic colors
+
+.sg-color-white
+  @extend %background-white
+.sg-color-white-offset
+  @extend %background-white-offset
+.sg-color-gray-light
+  @extend %background-gray-light
+.sg-color-gray
+  @extend %background-gray
+.sg-color-gray-dark
+  @extend %background-gray-dark
+.sg-color-black
+  @extend %background-black

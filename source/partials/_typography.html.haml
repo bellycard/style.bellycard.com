@@ -1,0 +1,121 @@
+%h2 Typography
+
+-# ========================================
+-# Typographic scale
+
+%h4 Scale
+
+%p All font sizes include an extendable class <code>[.]</code>, of which start with <code>h-</code> followed by the font size name. These classes may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
+
+%h6 Hero Scale
+
+%p One off large font sizes to be used for hero, leader, or introduction sections.
+
+%ul.sg-value-list.sg-type-scale
+  %li.h-giga
+    Giga &ndash; 60px
+    %code.sg-value-offset .h-giga
+  %li.h-mega
+    Mega &ndash; 48px
+    %code.sg-value-offset .h-mega
+
+%h6 Default Scale
+
+%p General font sizes used across all headings and default text. The base font size is <code>14</code> pixels.
+
+%ul.sg-value-list.sg-type-scale
+  %li.h-alpha
+    Alpha &ndash; 36px
+    %code.sg-value-offset .h-alpha
+  %li.h-bravo
+    Bravo &ndash; 24px
+    %code.sg-value-offset .h-bravo
+  %li.h-charlie
+    Charlie &ndash; 21px
+    %code.sg-value-offset .h-charlie
+  %li.h-delta
+    Delta &ndash; 18px
+    %code.sg-value-offset .h-delta
+  %li.h-echo
+    Echo &ndash; 16px
+    %code.sg-value-offset .h-echo
+  %li.h-foxtrot
+    Foxtrot &ndash; 14px
+    %code.sg-value-offset .h-foxtrot
+  %li.h-golf
+    Golf &ndash; 12px
+    %code.sg-value-offset .h-golf
+  %li.h-hotel
+    Hotel &ndash; 11px
+    %code.sg-value-offset .h-hotel
+  %li.h-india
+    India &ndash; 10px
+    %code.sg-value-offset .h-india
+
+%h4 Headings
+
+%p All headings include a <code>margin-bottom</code> and the appropriate <code>line-height</code>.
+
+%h1
+  Heading One &ndash; Book 36px
+%h2
+  Heading Two &ndash; Book 24px
+%h3
+  Heading Three &ndash; Book 21px
+%h4
+  Heading Four &ndash; Normal 18px
+%h5
+  Heading Five &ndash; Semibold 16px
+%h6
+  Heading Six &ndash; Semibold 14px
+
+-# ========================================
+-# Font families
+
+%h4 Font Families
+
+%p There are two font families available, each of which include an extendable silent class <code>[%]</code>.
+
+%ul.sg-value-list
+  %li.sg-type-families-sans-serif
+    Sans-serif &ndash; Open Sans, Verdana, Helvetica, sans-serif
+    %code.sg-value-offset %font-family-sans-serif
+  %li.sg-type-families-monospace
+    Monospace &ndash; Source Code Pro, Inconsolata, Lucida Console, Terminal, Courier New, Courier
+    %code.sg-value-offset %font-family-monospace
+
+-# ========================================
+-# Font weights
+
+%h4 Font Weights
+
+%p There are three font weights available, each of which include an extendable silent class <code>[%]</code>. There are however a few rules as to how these font weights may be paired with other styles. Open Sans may only appear as italic in a normal or bold weight. Source Code Pro should never appear in a book weight or as italic.
+
+%ul.sg-value-list
+  %li.sg-type-weight-bold
+    Bold &ndash; 600
+    %code.sg-value-offset %font-weight-bold
+  %li.sg-type-weight-normal
+    Normal &ndash; 400
+    %code.sg-value-offset %font-weight-normal
+  %li.sg-type-weight-book
+    Book &ndash; 300
+    %code.sg-value-offset %font-weight-book
+
+-# ========================================
+-# Line heights
+
+%h4 Line Heights
+
+%p There are three line heights available, each of which included a variable <code>[$]</code> and an extendable silent class <code>[%]</code>. When using a line height outright please use the <code>@extend</code> rule, however should computation be needed feel free to use one of the variables.
+
+%ul.sg-value-list
+  %li.sg-type-height-base
+    Base &ndash; 22px
+    %code.sg-value-offset [$, %]line-height-base
+  %li.sg-type-height-double
+    Double &ndash; 44px
+    %code.sg-value-offset [$, %]line-height-double
+  %li.sg-type-height-triple
+    Triple &ndash; 66px
+    %code.sg-value-offset [$, %]line-height-triple

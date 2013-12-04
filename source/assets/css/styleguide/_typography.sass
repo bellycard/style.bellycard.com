@@ -1,0 +1,53 @@
+// Typography
+// ========================================
+
+// Scale
+
+.sg-type-scale
+
+  .h-giga,
+  .h-mega
+    @extend %line-height-triple
+
+  .h-alpha,
+  .h-bravo,
+  .h-charlie
+    @extend %line-height-double
+
+// Font families
+
+.sg-type-families-sans-serif
+  @extend %font-family-sans-serif
+
+.sg-type-families-monospace
+  @extend %font-family-monospace
+
+// Font weights
+
+.sg-type-weight-bold,
+.sg-type-weight-normal,
+.sg-type-weight-book
+  code
+    @extend %font-weight-normal
+
+.sg-type-weight-bold
+  @extend %font-weight-bold
+
+.sg-type-weight-normal
+  @extend %font-weight-normal
+
+.sg-type-weight-book
+  @extend %font-weight-book
+
+// Line heights
+
+.sg-type-height-base
+  @extend %background-white-offset
+  @extend %line-height-base
+
+.sg-type-height-double
+  @extend %line-height-double
+
+.sg-type-height-triple
+  @extend %background-white-offset
+  @extend %line-height-triple
