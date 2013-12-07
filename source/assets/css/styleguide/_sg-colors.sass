@@ -4,12 +4,9 @@
 .sg-colors
   @extend .margin-bottom
 
-  ul
-    @extend .grid-col
-    @extend .grid-one-third
-
 .sg-color,
 .sg-color-alt
+  @extend .grid-col
   @extend .list-none
   @extend .margin-0
   @extend .pad-box
@@ -29,9 +26,15 @@
 
 .sg-color-brand-blue
   @extend %background-brand-blue
+  @extend .grid-one-whole
+  height: $line-height-base * 8
 
 // ========================================
 // Brand blues
+
+.sg-color-brand-blue-dark,
+.sg-color-brand-blue-light
+  @extend .grid-one-half
 
 .sg-color-brand-blue-dark
   @extend %background-brand-blue-dark
@@ -40,6 +43,11 @@
 
 // ========================================
 // Brand colors
+
+.sg-color-brand-green,
+.sg-color-brand-orange,
+.sg-color-brand-yellow
+  @extend .grid-one-third
 
 .sg-color-brand-green
   @extend %background-brand-green
@@ -50,6 +58,14 @@
 
 // ========================================
 // Monochromatic colors
+
+.sg-color-white,
+.sg-color-white-offset,
+.sg-color-gray-light,
+.sg-color-gray,
+.sg-color-gray-dark,
+.sg-color-black
+  @extend .grid-one-third
 
 .sg-color-white
   @extend %background-white
@@ -63,3 +79,22 @@
   @extend %background-gray-dark
 .sg-color-black
   @extend %background-black
+
+// ========================================
+// Slate colors
+
+.sg-color-slate
+  @extend %background-slate
+  @extend .grid-one-whole
+
+.sg-color-slate-offset,
+.sg-color-slate-light,
+.sg-color-slate-dark
+  @extend .grid-one-third
+
+.sg-color-slate-offset
+  @extend %background-slate-offset
+.sg-color-slate-light
+  @extend %background-slate-light
+.sg-color-slate-dark
+  @extend %background-slate-dark

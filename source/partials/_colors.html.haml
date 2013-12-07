@@ -3,27 +3,22 @@
 %p All colors include a variable, the required method for using a color, as well as Hexidecimal and RGB values for reference. When using a color as a text color or background color extend the proper silent class. Silent classes for colors begin with <code>color-</code> followed by the color name, <code>%color-brand-blue</code> for example. Silent classes for backgrounds begin with <code>background-</code> followed by the color name, <code>%background-brand-blue</code> for example.
 
 -# ========================================
--# Primary blue
-
-%h4 Primary Blue
-
-%ul.margin-bottom.sg-color.sg-color-brand-blue
-  %li
-    Variable
-    %code.sg-color-value $brand-blue
-  %li
-    Hex
-    %code.sg-color-value #33a9e0
-  %li
-    RGB
-    %code.sg-color-value 51, 169, 224
-
--# ========================================
 -# Brand blues
 
 %h4 Brand Blues
 
 .grid.sg-colors
+
+  %ul.sg-color.sg-color-brand-blue
+    %li
+      Variable
+      %code.sg-color-value $brand-blue
+    %li
+      Hex
+      %code.sg-color-value #33a9e0
+    %li
+      RGB
+      %code.sg-color-value 51, 169, 224
 
   %ul.sg-color.sg-color-brand-blue-dark
     %li
@@ -159,3 +154,54 @@
     %li
       RGB
       %code.sg-color-value 255, 255, 255
+
+-# ========================================
+-# Slate colors
+
+%h4 Slate Colors
+
+.grid.sg-colors
+
+  %ul.sg-color.sg-color-slate
+    %li
+      Variable
+      %code.sg-color-value $slate
+    %li
+      Hex
+      %code.sg-color-value #45454c
+    %li
+      RGB
+      %code.sg-color-value 69, 69, 76
+
+  %ul.sg-color.sg-color-slate-offset
+    %li
+      Variable
+      %code.sg-color-value $slate-offset
+    %li
+      Hex
+      %code.sg-color-value #95959a
+    %li
+      RGB
+      %code.sg-color-value 149, 149, 154
+
+  %ul.sg-color.sg-color-slate-light
+    %li
+      Variable
+      %code.sg-color-value $slate-light
+    %li
+      Hex
+      %code.sg-color-value #4c4c53
+    %li
+      RGB
+      %code.sg-color-value 76, 76, 83
+
+  %ul.sg-color.sg-color-slate-dark
+    %li
+      Variable
+      %code.sg-color-value $slate-dark
+    %li
+      Hex
+      %code.sg-color-value #3a3a40
+    %li
+      RGB
+      %code.sg-color-value 58, 58, 64
