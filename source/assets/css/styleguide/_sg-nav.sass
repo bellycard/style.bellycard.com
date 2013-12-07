@@ -1,0 +1,24 @@
+// Navigation
+// ========================================
+
+.sg-nav
+  @extend .grid-col
+  @extend .grid-two-twelfths
+
+  li
+    border-bottom: 1px solid rgba(#000, .2)
+
+  a
+    @extend %color-slate-offset
+    @extend .display-block
+    @extend .pad-gutters
+    padding-bottom: 10px
+    padding-top: 11px
+    text-decoration: none
+    &:hover
+      @extend %color-white
+
+  .sg-nav-active a
+    border-left: 4px solid $brand-blue
+    @extend %color-white
+    cursor: default

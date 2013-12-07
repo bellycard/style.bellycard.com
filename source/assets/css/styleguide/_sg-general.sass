@@ -1,0 +1,24 @@
+// General styles
+// ========================================
+
+body
+  @extend %background-slate
+
+.sg-main
+  @extend %background-white
+  @extend .grid-col
+  @extend .grid-ten-twelfths
+
+.sg-section,
+.sg-section-alt
+  @extend .pad-box
+
+.sg-section
+  border-bottom: 5px solid $white-offset
+  margin-bottom: $line-height-base - 5px
+
+.sg-value-list
+  @extend .list-none
+
+.sg-value-offset
+  @extend .pull-right
