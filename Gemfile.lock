@@ -1,6 +1,7 @@
 GIT
   remote: git@github.com:bellycard/rolodex.git
-  revision: 679db0bd9791df01ce931ce7a69af916773d71e0
+  revision: 40b9cc992542cba1d87a57959c7189b767a7a649
+  ref: 40b9cc992542cba1d87a57959c7189b767a7a649
   specs:
     rolodex (0.0.1)
       compass
