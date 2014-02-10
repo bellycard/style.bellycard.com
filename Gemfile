@@ -8,9 +8,6 @@ gem "middleman-s3_sync"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
-# GitHub pages
-gem "middleman-gh-pages", :git => "git@github.com:neo/middleman-gh-pages.git"
-
 # Belly style rolodex
 # gem "rolodex", :path => "~/Documents/Repositories/bellycard/rolodex"
 gem "rolodex", :git => "git@github.com:bellycard/rolodex.git", :ref => "de810ac73969e4346cea6ca27d1503cfc0f9d82a"
