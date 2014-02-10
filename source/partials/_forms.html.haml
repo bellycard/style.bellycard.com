@@ -1,0 +1,398 @@
+%h2 Forms
+
+-# ========================================
+-# Regular
+
+%h4 Normal Forms
+
+%form.grid-1-3(role="form")
+
+  .form-group
+    %input.form-control(type="text" placeholder="Your name")
+    .form-help Please put your name in the box
+
+  .form-group
+    %input.form-control(type="email" placeholder="Enter email")
+
+  .form-group
+    %input.form-control(type="password" placeholder="Password")
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Check me out
+    .form-choice
+      %label
+        %input(type="checkbox") Check me out too, I'm longer and will wrap onto multiple lines
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="radio" name="radio-choices") Check me out
+    .form-choice
+      %label
+        %input(type="radio" name="radio-choices") Check me out too, I'm longer and will wrap onto multiple lines
+
+  .form-group.form-choice
+    %label
+      %input(type="checkbox") Check me out
+    .form-help You really should checkout that box
+
+  .form-group
+    %textarea.form-area(placeholder="A textarea for longer formed input")
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+-# ========================================
+-# Rows
+
+%h4 Forms with Labels
+
+%form.grid-1-3(role="form")
+
+  .form-group
+    .form-row
+      %label.form-label(for="sg-form-name") Name
+      %input.form-control#sg-form-name(type="text" placeholder="Your name")
+    .form-help Please put your name in the box
+
+  .form-group.form-row
+    %label.form-label(for="sg-form-email") Email
+    %input.form-control#sg-form-email(type="email" placeholder="Enter email")
+
+  .form-group
+    .form-row
+      %label.form-label(for="sg-form-password") Password
+      %input.form-control#sg-form-password(type="password" placeholder="Password")
+
+  .form-group
+    .form-row
+      %label.form-label(for="sg-form-area") Comments
+      %textarea.form-area#sg-form-area(placeholder="A textarea for longer formed input")
+    .form-help Please answer above
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+-# ========================================
+-# Inline buttons
+
+%h4 Buttons Inline with Inputs
+
+%form.grid-1-3(role="form")
+
+  .form-group
+    .form-row
+      %input.form-control(type="search" placeholder="Search here...")
+      .form-btn
+        %button.btn-success.btn(type="submit") Search
+    .form-help Please search above
+
+-# ========================================
+-# Stacked
+
+%h4 Stacked Forms
+
+%form.form-stacked.grid-1-3(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control(type="text" placeholder="Your name")
+    .form-group-stacked
+      %input.form-control(type="email" placeholder="Enter email")
+    .form-group-stacked
+      %textarea.form-area(placeholder="A textarea for longer formed input")
+    .form-group-stacked
+      %input.form-control(type="password" placeholder="Password")
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control(type="email" placeholder="Email")
+    .form-group-stacked
+      %input.form-control(type="password" placeholder="Password")
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit") Login
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control.form-control-icon#sg-form-email-icon(type="email" placeholder="Email")
+      %label.form-icon.form-icon-email(for="sg-form-email-icon") Email
+    .form-group-stacked
+      %input.form-control.form-control-icon#sg-form-password-icon(type="password" placeholder="Password")
+      %label.form-icon.form-icon-lock(for="sg-form-password-icon") Password
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit") Login
+
+-# ========================================
+-# Required Inputs
+
+%h4 Required Inputs
+
+%form.grid-1-3(role="form")
+
+  .form-group
+    %input.form-control#sg-form-name-required(type="text" placeholder="Your name" required)
+    %label.form-required(for="sg-form-name-required") *
+    .form-help Please put your name in the box
+
+  .form-group
+    .form-row
+      %label.form-label(for="sg-form-name-inline-required") Name
+      %input.form-control#sg-form-name-inline-required(type="text" placeholder="Your name" required)
+    %label.form-required(for="sg-form-name-inline-required") *
+    .form-help Please put your name in the box
+
+  .form-group
+    .form-choice.form-choice-required
+      %label
+        %input(type="checkbox" required) Check me out
+        .form-required *
+    .form-choice.form-choice-required
+      %label
+        %input(type="radio" name="radio-choices") Check me out too, I'm longer and will wrap onto multiple lines
+        .form-required *
+
+  .form-group
+    %textarea.form-area#sg-form-area-required(placeholder="A textarea for longer formed input" required)
+    %label.form-required(for="sg-form-area-required") *
+    .form-help Please answer above
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+%form.form-stacked.grid-1-3(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control#sg-form-name-stacked-required(type="text" placeholder="Your name" required)
+      %label.form-required(for="sg-form-name-stacked-required") *
+    .form-group-stacked
+      %input.form-control(type="email" placeholder="Enter email")
+    .form-group-stacked
+      %textarea.form-area#sg-form-area-stacked-required(placeholder="A textarea for longer formed input" required)
+      %label.form-required(for="sg-form-area-stacked-required") *
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control#sg-form-email-stacked-alt-required(type="email" placeholder="Email" required)
+      %label.form-required(for="sg-form-email-stacked-alt-required") *
+    .form-group-stacked
+      %input.form-control#sg-form-password-stacked-alt-required(type="password" placeholder="Password" required)
+      %label.form-required(for="sg-form-password-stacked-alt-required") *
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit") Login
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control.form-control-icon#sg-form-email-icon-required(type="email" placeholder="Email" required)
+      %label.form-icon.form-icon-email(for="sg-form-email-icon-required") Email
+      %label.form-required(for="sg-form-email-icon-required") *
+    .form-group-stacked
+      %input.form-control.form-control-icon#sg-form-password-icon-required(type="password" placeholder="Password" required)
+      %label.form-icon.form-icon-lock(for="sg-form-password-icon-required") Password
+      %label.form-required(for="sg-form-password-icon-required") *
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit") Login
+
+-# ========================================
+-# Error Inputs
+
+%h4 Error Inputs
+
+%form.grid-1-3(role="form")
+
+  .form-group.form-error
+    %input.form-control(type="password" placeholder="Password")
+    .form-help Wrong password silly
+
+  .form-group.form-error
+    .form-row
+      %label.form-label(for="sg-form-password-error") Password
+      %input.form-control#sg-form-password-error(type="password" placeholder="Password")
+    .form-help Wrong password
+
+  .form-group
+    .form-choice.form-error
+      %label
+        %input(type="checkbox" required) Check me out
+    .form-choice.form-error
+      %label
+        %input(type="radio" name="radio-choices") Check me out too, I'm longer and will wrap onto multiple lines
+
+  .form-group.form-error
+    .form-row
+      %input.form-control(type="search" placeholder="Search here...")
+      .form-btn
+        %button.btn-success.btn(type="submit") Search
+    .form-help Unacceptable search terms
+
+  .form-group.form-error
+    %textarea.form-area(placeholder="A textarea for longer formed input")
+
+  .form-group.form-error
+    .form-row
+      %label.form-label(for="sg-form-area-error") Comments
+      %textarea.form-area#sg-form-area-error(placeholder="A textarea for longer formed input")
+    .form-help Please answer above
+
+%form.form-stacked.grid-1-3(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control(type="text" placeholder="Your name")
+    .form-group-stacked.form-error
+      %textarea.form-area(placeholder="A textarea for longer formed input")
+    .form-group-stacked
+      %input.form-control(type="email" placeholder="Enter email")
+    .form-group-stacked.form-error
+      %input.form-control(type="password" placeholder="Password")
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked.form-error
+      %input.form-control(type="email" placeholder="Email")
+    .form-group-stacked.form-error
+      %input.form-control(type="password" placeholder="Password")
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit") Login
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked.form-error
+      %input.form-control.form-control-icon#sg-form-email-icon-error(type="email" placeholder="Email")
+      %label.form-icon.form-icon-email(for="sg-form-email-icon-error") Email
+    .form-group-stacked.form-error
+      %input.form-control.form-control-icon#sg-form-password-icon-error(type="password" placeholder="Password")
+      %label.form-icon.form-icon-lock(for="sg-form-password-icon-error") Password
+
+  .form-group
+    .form-choice
+      %label
+        %input(type="checkbox") Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit") Login
+
+-# ========================================
+-# Disabled Inputs
+
+%h4 Disabled Inputs
+
+%form.grid-1-3(role="form")
+
+  .form-group
+    %input.form-control(type="text" placeholder="Disabled, sorry" disabled)
+    .form-help Currently unavailable
+
+  .form-group
+    .form-row
+      %label.form-label.form-label-disabled Disabled
+      %input.form-control(type="text" placeholder="Disabled, sorry" disabled)
+    .form-help Currently unavailable
+
+  .form-group
+    .form-row
+      %input.form-control(type="search" placeholder="Disabled, sorry" disabled)
+      .form-btn
+        %button.btn-success.btn(type="submit" disabled) Search
+    .form-help Currently unavailable
+
+  .form-group
+    .form-choice.form-choice-disabled
+      %label
+        %input(type="checkbox" disabled) Check me out
+    .form-choice.form-choice-disabled
+      %label
+        %input(type="radio" name="radio-choices" disabled) Check me out
+
+  .form-group
+    %textarea.form-area(placeholder="A textarea for longer formed input" disabled)
+
+%form.form-stacked.grid-1-3(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control(type="text" placeholder="Your name" disabled)
+    .form-group-stacked
+      %textarea.form-area(placeholder="A textarea for longer formed input" disabled)
+    .form-group-stacked
+      %input.form-control(type="text" placeholder="Disabled, sorry" disabled)
+
+  .form-group
+    %button.btn-default(type="submit") Submit
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control(type="email" placeholder="Email" disabled)
+    .form-group-stacked
+      %input.form-control(type="password" placeholder="Password" disabled)
+
+  .form-group
+    .form-choice.form-choice-disabled
+      %label
+        %input(type="checkbox" disabled) Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit" disabled) Login
+
+%form.form-stacked-alt.sg-alt-forms.grid-1-3.margin-bottom(role="form")
+
+  .form-group
+    .form-group-stacked
+      %input.form-control.form-control-icon#sg-form-email-icon-disabled(type="email" placeholder="Email" disabled)
+      %label.form-icon.form-icon-disabled.form-icon-email(for="sg-form-email-icon-disabled") Email
+    .form-group-stacked
+      %input.form-control.form-control-icon#sg-form-password-icon-disabled(type="password" placeholder="Password" disabled)
+      %label.form-icon.form-icon-disabled.form-icon-lock(for="sg-form-password-icon-disabled") Password
+
+  .form-group
+    .form-choice.form-choice-disabled
+      %label
+        %input(type="checkbox" disabled) Remember me for two weeks
+
+  %button.btn-default.grid-1-1(type="submit" disabled) Login
