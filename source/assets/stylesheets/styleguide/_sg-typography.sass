@@ -5,19 +5,25 @@
 
 .sg-type-scale
 
-  .h-giga,
-  .h-mega
-    @extend %line-height-triple
+  .s-giga
+    +rem(line-height, $line-height-step * 12)
 
-  .h-alpha,
-  .h-bravo,
-  .h-charlie
-    @extend %line-height-double
+  .s-mega
+    +rem(line-height, $line-height-step * 9)
+
+// Headings
+
+.sg-heading
+  code 
+    @extend %font-weight-normal
 
 // Font families
 
-.sg-type-families-sans-serif
-  @extend %font-family-sans-serif
+.sg-type-families-open-sans
+  @extend %font-family-open-sans
+
+.sg-type-families-helvetica
+  @extend %font-family-helvetica
 
 .sg-type-families-monospace
   @extend %font-family-monospace
@@ -41,13 +47,16 @@
 
 // Line heights
 
-.sg-type-height-base
+.sg-type-height-smaller
   @extend %background-white-offset
+  @extend %line-height-smaller
+
+.sg-type-height-base
   @extend %line-height-base
 
-.sg-type-height-double
-  @extend %line-height-double
-
-.sg-type-height-triple
+.sg-type-height-taller
   @extend %background-white-offset
-  @extend %line-height-triple
+  @extend %line-height-taller
+
+.sg-type-height-tallest
+  @extend %line-height-tallest

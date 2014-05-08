@@ -1,85 +1,91 @@
-%h2 Typography
+%h1 Typography
 
 -# ========================================
 -# Typographic scale
 
-%h4 Scale
+%h2 Scale
 
 %p All font sizes include an extendable class <code>[.]</code>, of which start with <code>h-</code> followed by the font size name. These classes may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
 
-%h6 Hero Scale
-
-%p One off large font sizes to be used for hero, leader, or introduction sections.
+%p One off large font sizes to be used for hero, leader, or introduction sections. These extends only include a <code>font-size</code> and will require any desired <code>font-weight</code> or <code>line-height</code> separately.
 
 %ul.sg-value-list.sg-type-scale
-  %li.h-giga
+  %li.s-giga
     Giga &ndash; 60px
-    %code.sg-value-offset .h-giga
-  %li.h-mega
+    %code.sg-value-offset .s-giga
+  %li.s-mega
     Mega &ndash; 48px
-    %code.sg-value-offset .h-mega
+    %code.sg-value-offset .s-mega
 
-%h6 Default Scale
+%p General font sizes used across all headings and default text. The base font size is <code>14</code> pixels. The scale includes a specified <code>line-height</code> for each given <code>font-size</code>, of which is always a variable of <code>6px</code>. Any <code>font-size</code> of <code>12px</code> and under will use the Helvetica Neue typeface.
 
-%p General font sizes used across all headings and default text. The base font size is <code>14</code> pixels.
+%p All scale extends begin with <code>.s-*</code>.
 
 %ul.sg-value-list.sg-type-scale
-  %li.h-alpha
-    Alpha &ndash; 36px
-    %code.sg-value-offset .h-alpha
-  %li.h-bravo
-    Bravo &ndash; 24px
-    %code.sg-value-offset .h-bravo
-  %li.h-charlie
-    Charlie &ndash; 21px
-    %code.sg-value-offset .h-charlie
-  %li.h-delta
-    Delta &ndash; 18px
-    %code.sg-value-offset .h-delta
-  %li.h-echo
-    Echo &ndash; 16px
-    %code.sg-value-offset .h-echo
-  %li.h-foxtrot
-    Foxtrot &ndash; 14px
-    %code.sg-value-offset .h-foxtrot
-  %li.h-golf
-    Golf &ndash; 12px
-    %code.sg-value-offset .h-golf
-  %li.h-hotel
-    Hotel &ndash; 11px
-    %code.sg-value-offset .h-hotel
-  %li.h-india
-    India &ndash; 10px
-    %code.sg-value-offset .h-india
+  %li.s-alpha
+    Alpha &ndash; 36px/24px
+    %code.sg-value-offset .s-alpha
+  %li.s-bravo
+    Bravo &ndash; 24px/30px
+    %code.sg-value-offset .s-bravo
+  %li.s-charlie
+    Charlie &ndash; 21px/30px
+    %code.sg-value-offset .s-charlie
+  %li.s-delta
+    Delta &ndash; 18px/24px
+    %code.sg-value-offset .s-delta
+  %li.s-echo
+    Echo &ndash; 16px/24px
+    %code.sg-value-offset .s-echo
+  %li.s-foxtrot
+    Foxtrot &ndash; 14px/24px
+    %code.sg-value-offset .s-foxtrot
+  %li.s-golf
+    Golf &ndash; 12px/18px (Helvetica Neue)
+    %code.sg-value-offset .s-golf
+  %li.s-hotel
+    Hotel &ndash; 11px/18px (Helvetica Neue)
+    %code.sg-value-offset .s-hotel
 
-%h4 Headings
+%h2 Headings
 
-%p All headings include a <code>margin-bottom</code> and the appropriate <code>line-height</code>.
+%p Headings are extended off the scale and include a <code>margin-bottom</code> and the appropriate <code>font-weight</code>.
 
-%h1
-  Heading One &ndash; Book 36px
-%h2
-  Heading Two &ndash; Book 24px
-%h3
-  Heading Three &ndash; Book 21px
-%h4
-  Heading Four &ndash; Normal 18px
-%h5
-  Heading Five &ndash; Semibold 16px
-%h6
-  Heading Six &ndash; Semibold 14px
+%p All heading extends begin with <code>.h-*</code>.
+
+%h1.sg-heading
+  Heading One &ndash; Book 36px/42px 
+  %code.sg-value-offset .h-alpha
+%h2.sg-heading
+  Heading Two &ndash; Book 24px/30px
+  %code.sg-value-offset .h-bravo
+%h3.sg-heading
+  Heading Three &ndash; Book 21px/30px
+  %code.sg-value-offset .h-charlie
+%h4.sg-heading
+  Heading Four &ndash; Normal 18px/24px
+  %code.sg-value-offset .h-delta
+%h5.sg-heading
+  Heading Five &ndash; Semibold 16px/24px
+  %code.sg-value-offset .h-echo
+%h6.sg-heading
+  Heading Six &ndash; Semibold 14px/24px
+  %code.sg-value-offset .h-foxtrot
 
 -# ========================================
 -# Font families
 
-%h4 Font Families
+%h2 Font Families
 
 %p There are two font families available, each of which include an extendable silent class <code>[%]</code>.
 
 %ul.sg-value-list
-  %li.sg-type-families-sans-serif
-    Sans-serif &ndash; Open Sans, Verdana, Helvetica, sans-serif
-    %code.sg-value-offset %font-family-sans-serif
+  %li.sg-type-families-open-sans
+    Open Sans &ndash; Open Sans, Verdana, Helvetica, sans-serif
+    %code.sg-value-offset %font-family-open-sans
+  %li.sg-type-families-helvetica
+    Helvetica Neue &ndash; Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif
+    %code.sg-value-offset %font-family-helvetica
   %li.sg-type-families-monospace
     Monospace &ndash; Source Code Pro, Inconsolata, Lucida Console, Terminal, Courier New, Courier
     %code.sg-value-offset %font-family-monospace
@@ -87,7 +93,7 @@
 -# ========================================
 -# Font weights
 
-%h4 Font Weights
+%h2 Font Weights
 
 %p There are three font weights available, each of which include an extendable silent class <code>[%]</code>. There are however a few rules as to how these font weights may be paired with other styles. Open Sans may only appear as italic in a normal or bold weight. Source Code Pro should never appear in a book weight or as italic.
 
@@ -105,7 +111,7 @@
 -# ========================================
 -# Line heights
 
-%h4 Miscellaneous Type Styles
+%h2 Miscellaneous Type Styles
 
 %p Miscellaneous typography styles, all of which include an extendable silent class <code>[%]</code>.
 
@@ -120,17 +126,20 @@
 -# ========================================
 -# Line heights
 
-%h4 Line Heights
+%h2 Line Heights
 
 %p There are three line heights available, each of which included a variable <code>[$]</code> and an extendable silent class <code>[%]</code>. When using a line height outright please use the <code>@extend</code> rule, however should computation be needed feel free to use one of the variables.
 
 %ul.sg-value-list
+  %li.sg-type-height-smaller
+    Smaller &ndash; 18px
+    %code.sg-value-offset [$, %]line-height-smaller
   %li.sg-type-height-base
-    Base &ndash; 22px
+    Base &ndash; 24px
     %code.sg-value-offset [$, %]line-height-base
-  %li.sg-type-height-double
-    Double &ndash; 44px
-    %code.sg-value-offset [$, %]line-height-double
-  %li.sg-type-height-triple
-    Triple &ndash; 66px
-    %code.sg-value-offset [$, %]line-height-triple
+  %li.sg-type-height-taller
+    Taller &ndash; 30px
+    %code.sg-value-offset [$, %]line-height-taller
+  %li.sg-type-height-tallest
+    Tallest &ndash; 42px
+    %code.sg-value-offset [$, %]line-height-tallest

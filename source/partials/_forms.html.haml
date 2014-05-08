@@ -1,9 +1,9 @@
-%h2 Forms
+%h1 Forms
 
 -# ========================================
 -# Regular
 
-%h4 Normal Forms
+%h2 Normal Forms
 
 %form.grid-1-3(role="form")
 
@@ -16,6 +16,16 @@
 
   .form-group
     %input.form-control(type="password" placeholder="Password")
+
+  -# .form-group.dropdown-control(data-js="dropdown-control")
+  -#   %button.form-control.dropdown-toggle(data-js="dropdown-toggle") Please Select
+  -#   %ul.dropdown-menu(data-js="dropdown-menu" role="menu")
+  -#     %li
+  -#       %a(href="#" rel="nofollow") Option one
+  -#     %li
+  -#       %a(href="#" rel="nofollow") Option two
+  -#     %li
+  -#       %a(href="#" rel="nofollow") Option three
 
   .form-group
     .form-choice
@@ -47,7 +57,7 @@
 -# ========================================
 -# Rows
 
-%h4 Forms with Labels
+%h2 Forms with Labels
 
 %form.grid-1-3(role="form")
 
@@ -78,7 +88,7 @@
 -# ========================================
 -# Inline buttons
 
-%h4 Buttons Inline with Inputs
+%h2 Buttons Inline with Inputs
 
 %form.grid-1-3(role="form")
 
@@ -92,7 +102,7 @@
 -# ========================================
 -# Stacked
 
-%h4 Stacked Forms
+%h2 Stacked Forms
 
 %form.form-stacked.grid-1-3(role="form")
 
@@ -144,7 +154,7 @@
 -# ========================================
 -# Required Inputs
 
-%h4 Required Inputs
+%h2 Required Inputs
 
 %form.grid-1-3(role="form")
 
@@ -232,7 +242,7 @@
 -# ========================================
 -# Error Inputs
 
-%h4 Error Inputs
+%h2 Error Inputs
 
 %form.grid-1-3(role="form")
 
@@ -320,26 +330,26 @@
 -# ========================================
 -# Disabled Inputs
 
-%h4 Disabled Inputs
+%h2 Disabled Inputs
 
 %form.grid-1-3(role="form")
 
   .form-group
     %input.form-control(type="text" placeholder="Disabled, sorry" disabled)
-    .form-help Currently unavailable
+    .form-help.form-help-disabled Currently unavailable
 
   .form-group
     .form-row
       %label.form-label.form-label-disabled Disabled
       %input.form-control(type="text" placeholder="Disabled, sorry" disabled)
-    .form-help Currently unavailable
+    .form-help.form-help-disabled Currently unavailable
 
   .form-group
     .form-row
       %input.form-control(type="search" placeholder="Disabled, sorry" disabled)
       .form-btn
         %button.btn-success.btn(type="submit" disabled) Search
-    .form-help Currently unavailable
+    .form-help.form-help-disabled Currently unavailable
 
   .form-group
     .form-choice.form-choice-disabled

@@ -1,10 +1,10 @@
 GIT
   remote: git@github.com:bellycard/rolodex.git
-  revision: de810ac73969e4346cea6ca27d1503cfc0f9d82a
-  ref: de810ac73969e4346cea6ca27d1503cfc0f9d82a
+  revision: bb88061bd74744da2ef9d38ef13a257f920f29dd
+  ref: bb88061bd74744da2ef9d38ef13a257f920f29dd
   specs:
     rolodex (0.0.1)
-      compass
+      compass-rails
       sass
 
 GEM
@@ -24,6 +24,9 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.1.7)
+      compass (>= 0.12.2)
+      sprockets (<= 2.11.0)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
