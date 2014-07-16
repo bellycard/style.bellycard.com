@@ -1,207 +1,171 @@
+:ruby
+
+  @primary_palette = [
+    {var: "slate",       hex: "45454c"},
+    {var: "blue",        hex: "33a9e0"},
+    {var: "slate-light", hex: "efeff4", alt: true},
+    {var: "white",       hex: "fff",    alt: true}
+  ]
+  
+  @blue_palette = [
+    {var: "blue-light", hex: "e1f2fa", alt: true},
+    {var: "blue",       hex: "33a9e0"},
+    {var: "blue-dark",  hex: "0076ad"}
+  ]
+
+  @slate_palette = [
+    {var: "slate-light", hex: "efeff4", alt: true},
+    {var: "slate",       hex: "45454c"},
+    {var: "slate-dark",  hex: "1e1e21"}
+  ]
+
+  @red_palette = [
+    {var: "red-light",    hex: "f7e2e2", alt: true},
+    {var: "red",          hex: "cb4e52"},
+    {var: "red-dark",     hex: "9c292d"}
+  ]
+
+  @gold_palette = [
+    {var: "gold-light",   hex: "fceddf", alt: true},
+    {var: "gold",         hex: "f3ae4e"},
+    {var: "gold-dark",    hex: "c07b1b"}
+  ]
+
+  @purple_palette = [
+    {var: "purple-light", hex: "cbd6f4", alt: true},
+    {var: "purple",       hex: "6479bf"},
+    {var: "purple-dark",  hex: "31468c"}
+  ]
+
+  @orange_palette = [
+    {var: "orange-light", hex: "f4d4c6", alt: true},
+    {var: "orange",       hex: "ed844a"},
+    {var: "orange-dark",  hex: "ba5117"}
+  ]
+
+  @green_palette = [
+    {var: "green-light",  hex: "c8edcd", alt: true},
+    {var: "green",        hex: "45ad60"},
+    {var: "green-dark",   hex: "127a2d"}
+  ]
+
+  @pink_palette = [
+    {var: "pink-light",   hex: "f2d1e3", alt: true},
+    {var: "pink",         hex: "d37295"},
+    {var: "pink-dark",    hex: "a03f62"}
+  ]
+
+  @monochromatic_palette = [
+    {var: "white",        hex: "fff",    alt: true},
+    {var: "white-offset", hex: "f7f7f7", alt: true},
+    {var: "gray-light",   hex: "ccc",    alt: true},
+    {var: "gray",         hex: "999"},
+    {var: "gray-dark",    hex: "666"},
+    {var: "black-offset", hex: "333"},
+    {var: "black",        hex: "000"}
+  ]
+
 %h1 Colors
 
-%p All colors include a variable, the required method for using a color, as well as Hexidecimal and RGB values for reference. When using a color as a text color or background color extend the proper silent class. Silent classes for colors begin with <code>color-</code> followed by the color name, <code>%color-brand-blue</code> for example. Silent classes for backgrounds begin with <code>background-</code> followed by the color name, <code>%background-brand-blue</code> for example.
+%p All colors include a variable, the required method for using a color, as well as Hexidecimal and RGB values for reference. When using a color as a text color or background color extend the proper silent class. Silent classes for colors begin with <code>color-</code> followed by the color name, <code>%color-blue</code> for example. Silent classes for backgrounds begin with <code>background-</code> followed by the color name, <code>%background-blue</code> for example.
 
 -# ========================================
--# Brand blues
+-# Primary Palette
 
-%h2 Brand Blues
+%h2 Primary Palette
 
-.grid.sg-colors
+%ul.grid.sg-palette
 
-  %ul.sg-color.sg-color-brand-blue
-    %li
-      Variable
-      %code.sg-color-value $brand-blue
-    %li
-      Hex
-      %code.sg-color-value #33a9e0
-    %li
-      RGB
-      %code.sg-color-value 51, 169, 224
-
-  %ul.sg-color.sg-color-brand-blue-dark
-    %li
-      Variable
-      %code.sg-color-value $brand-blue-dark
-    %li
-      Hex
-      %code.sg-color-value #0057a6
-    %li
-      RGB
-      %code.sg-color-value 0, 87, 166
-
-  %ul.sg-color.sg-color-brand-blue-light
-    %li
-      Variable
-      %code.sg-color-value $brand-blue-light
-    %li
-      Hex
-      %code.sg-color-value #69cce6
-    %li
-      RGB
-      %code.sg-color-value 105, 204, 230
+  - @primary_palette.each do |color|
+    
+    %li.grid-1-2{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+      %code.sg-color-value $#{color[:var]}
+      %code.sg-color-value ##{color[:hex]}
 
 -# ========================================
--# Brand colors
+-# Blue Palette
 
-%h2 Brand Colors
+%h2 Blue Palette
 
-.grid.sg-colors
+%ul.grid.sg-palette
 
-  %ul.sg-color.sg-color-brand-green
-    %li
-      Variable
-      %code.sg-color-value $brand-green
-    %li
-      Hex
-      %code.sg-color-value #62ab1b
-    %li
-      RGB
-      %code.sg-color-value 98, 171, 27
-
-  %ul.sg-color.sg-color-brand-orange
-    %li
-      Variable
-      %code.sg-color-value $brand-orange
-    %li
-      Hex
-      %code.sg-color-value #e93801
-    %li
-      RGB
-      %code.sg-color-value 233, 56, 1
-
-  %ul.sg-color.sg-color-brand-yellow
-    %li
-      Variable
-      %code.sg-color-value $brand-yellow
-    %li
-      Hex
-      %code.sg-color-value #edb406
-    %li
-      RGB
-      %code.sg-color-value 237, 180, 6
+  - @blue_palette.each do |color|
+    
+    %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+      %code.sg-color-value $#{color[:var]}
+      %code.sg-color-value ##{color[:hex]}
 
 -# ========================================
--# Monochromatic colors
+-# Slate Palette
 
-%h2 Monochromatic Colors
+%h2 Slate Palette
 
-.grid.sg-colors
+%ul.grid.sg-palette
 
-  %ul.sg-color.sg-color-black
-    %li
-      Variable
-      %code.sg-color-value $black
-    %li
-      Hex
-      %code.sg-color-value #333
-    %li
-      RGB
-      %code.sg-color-value 51, 51, 51
-
-  %ul.sg-color.sg-color-gray-dark
-    %li
-      Variable
-      %code.sg-color-value $gray-dark
-    %li
-      Hex
-      %code.sg-color-value #666
-    %li
-      RGB
-      %code.sg-color-value 102, 102, 102
-
-  %ul.sg-color.sg-color-gray
-    %li
-      Variable
-      %code.sg-color-value $gray
-    %li
-      Hex
-      %code.sg-color-value #999
-    %li
-      RGB
-      %code.sg-color-value 153, 153, 153
-
-  %ul.sg-color-alt.sg-color-gray-light
-    %li
-      Variable
-      %code.sg-color-value $gray-light
-    %li
-      Hex
-      %code.sg-color-value #ccc
-    %li
-      RGB
-      %code.sg-color-value 204, 204, 204
-
-  %ul.sg-color-alt.sg-color-white-offset
-    %li
-      Variable
-      %code.sg-color-value $white-offset
-    %li
-      Hex
-      %code.sg-color-value #eee
-    %li
-      RGB
-      %code.sg-color-value 238, 238, 238
-
-  %ul.sg-color-alt.sg-color-white
-    %li
-      Variable
-      %code.sg-color-value $white
-    %li
-      Hex
-      %code.sg-color-value #fff
-    %li
-      RGB
-      %code.sg-color-value 255, 255, 255
+  - @slate_palette.each do |color|
+    
+    %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+      %code.sg-color-value $#{color[:var]}
+      %code.sg-color-value ##{color[:hex]}
 
 -# ========================================
--# Slate colors
+-# Secondary Palette
 
-%h2 Slate Colors
+%h2 Secondary Palette
 
-.grid.sg-colors
+.grid.sg-palette
 
-  %ul.sg-color.sg-color-slate
-    %li
-      Variable
-      %code.sg-color-value $slate
-    %li
-      Hex
-      %code.sg-color-value #45454c
-    %li
-      RGB
-      %code.sg-color-value 69, 69, 76
+  %ul.grid-col.grid-1-3.margin-0
+    - @red_palette.each do |color|
+      
+      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+        %code.sg-color-value $#{color[:var]}
+        %code.sg-color-value ##{color[:hex]}
 
-  %ul.sg-color.sg-color-slate-offset
-    %li
-      Variable
-      %code.sg-color-value $slate-offset
-    %li
-      Hex
-      %code.sg-color-value #95959a
-    %li
-      RGB
-      %code.sg-color-value 149, 149, 154
+  %ul.grid-col.grid-1-3.margin-0
+    - @gold_palette.each do |color|
+      
+      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+        %code.sg-color-value $#{color[:var]}
+        %code.sg-color-value ##{color[:hex]}
 
-  %ul.sg-color.sg-color-slate-light
-    %li
-      Variable
-      %code.sg-color-value $slate-light
-    %li
-      Hex
-      %code.sg-color-value #4c4c53
-    %li
-      RGB
-      %code.sg-color-value 76, 76, 83
+  %ul.grid-col.grid-1-3.margin-0
+    - @purple_palette.each do |color|
+      
+      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+        %code.sg-color-value $#{color[:var]}
+        %code.sg-color-value ##{color[:hex]}
 
-  %ul.sg-color.sg-color-slate-dark
-    %li
-      Variable
-      %code.sg-color-value $slate-dark
-    %li
-      Hex
-      %code.sg-color-value #36363c
-    %li
-      RGB
-      %code.sg-color-value 54, 54, 60
+  %ul.grid-col.grid-1-3.margin-0
+    - @orange_palette.each do |color|
+      
+      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+        %code.sg-color-value $#{color[:var]}
+        %code.sg-color-value ##{color[:hex]}
+
+  %ul.grid-col.grid-1-3.margin-0
+    - @green_palette.each do |color|
+      
+      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+        %code.sg-color-value $#{color[:var]}
+        %code.sg-color-value ##{color[:hex]}
+
+  %ul.grid-col.grid-1-3.margin-0
+    - @pink_palette.each do |color|
+      
+      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+        %code.sg-color-value $#{color[:var]}
+        %code.sg-color-value ##{color[:hex]}
+
+-# ========================================
+-# Monochromatic Palette
+
+%h2 Monochromatic Palette
+
+%ul.grid.sg-palette
+
+  - @monochromatic_palette.each do |color|
+    
+    %li.grid-1-3{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+      %code.sg-color-value $#{color[:var]}
+      %code.sg-color-value ##{color[:hex]}
