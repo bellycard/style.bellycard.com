@@ -1,7 +1,14 @@
 // Buttons
 // ========================================
 
+.sg-alt-btns,
+.sg-overlay-btns
+  @extend %border-radius-base
+  @extend .padding-box
+
 .sg-alt-btns
   @extend %background-blue
-  @extend %border-radius-base
-  @extend .pad-box
+  @extend .margin-bottom
+
+.sg-overlay-btns
+  background: linear-gradient($blue, $green, $red)

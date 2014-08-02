@@ -10,87 +10,80 @@
     Small Button
     %code.sg-value-offset .btn-small
   %li
-    Active Button
-    %code.sg-value-offset .btn-active
-  %li
     Disabled Button Attribute
     %code.sg-value-offset [disabled]
-  %li
-    Disabled Button Class
-    %code.sg-value-offset .btn-disabled
-
 
 -# ========================================
 -# Default buttons
 
-%section.pad-bottom
+%section.padding-bottom
 
   %h2 Default Buttons
 
   %p Default buttons are identified with the <code>.btn-default</code> class.
 
-  %a.btn-default.btn-large(href="#" role="button") Default Button
-  %a.btn-default.btn-large.btn-disabled(href="#" role="button") Default Button
+  %a.btn.btn-default.btn-large(href="#" role="button") Default Button
+  %a.btn.btn-default.btn-large(href="#" role="button" disabled) Default Button
 
-  %a.btn-default(href="#" role="button") Default Button
-  %a.btn-default.btn-disabled(href="#" role="button") Default Button
+  %a.btn.btn-default(href="#" role="button") Default Button
+  %a.btn.btn-default(href="#" role="button" disabled) Default Button
 
-  %a.btn-default.btn-small(href="#" role="button") Default Button
-  %a.btn-default.btn-small.btn-disabled(href="#" role="button") Default Button
+  %a.btn.btn-default.btn-small(href="#" role="button") Default Button
+  %a.btn.btn-default.btn-small(href="#" role="button" disabled) Default Button
 
 -# ========================================
 -# Success buttons
 
-%section.pad-bottom
+%section.padding-bottom
 
   %h2 Success Buttons
 
   %p Success buttons are identified with the <code>.btn-success</code> class.
 
-  %a.btn-success.btn-large(href="#" role="button") Success Button
-  %a.btn-success.btn-large.btn-disabled(href="#" role="button") Success Button
+  %a.btn.btn-success.btn-large(href="#" role="button") Success Button
+  %a.btn.btn-success.btn-large(href="#" role="button" disabled) Success Button
 
-  %a.btn-success(href="#" role="button") Success Button
-  %a.btn-success.btn-disabled(href="#" role="button") Success Button
+  %a.btn.btn-success(href="#" role="button") Success Button
+  %a.btn.btn-success(href="#" role="button" disabled) Success Button
 
-  %a.btn-success.btn-small(href="#" role="button") Success Button
-  %a.btn-success.btn-small.btn-disabled(href="#" role="button") Success Button
+  %a.btn.btn-success.btn-small(href="#" role="button") Success Button
+  %a.btn.btn-success.btn-small(href="#" role="button" disabled) Success Button
 
 -# ========================================
 -# Danger buttons
 
-%section.pad-bottom
+%section.padding-bottom
 
   %h2 Danger Buttons
 
   %p Danger buttons are identified with the <code>.btn-danger</code> class.
 
-  %a.btn-danger.btn-large(href="#" role="button") Danger Button
-  %a.btn-danger.btn-large.btn-disabled(href="#" role="button") Danger Button
+  %a.btn.btn-danger.btn-large(href="#" role="button") Danger Button
+  %a.btn.btn-danger.btn-large(href="#" role="button" disabled) Danger Button
 
-  %a.btn-danger(href="#" role="button") Danger Button
-  %a.btn-danger.btn-disabled(href="#" role="button") Danger Button
+  %a.btn.btn-danger(href="#" role="button") Danger Button
+  %a.btn.btn-danger(href="#" role="button" disabled) Danger Button
 
-  %a.btn-danger.btn-small(href="#" role="button") Danger Button
-  %a.btn-danger.btn-small.btn-disabled(href="#" role="button") Danger Button
+  %a.btn.btn-danger.btn-small(href="#" role="button") Danger Button
+  %a.btn.btn-danger.btn-small(href="#" role="button" disabled) Danger Button
 
 -# ========================================
 -# Boring buttons
 
-%section.pad-bottom
+%section.padding-bottom
 
   %h2 Boring Buttons
 
   %p Boring buttons are identified with the <code>.btn-boring</code> class.
 
-  %a.btn-boring.btn-large(href="#" role="button") Boring Button
-  %a.btn-boring.btn-large.btn-disabled(href="#" role="button") Boring Button
+  %a.btn.btn-boring.btn-large(href="#" role="button") Boring Button
+  %a.btn.btn-boring.btn-large(href="#" role="button" disabled) Boring Button
 
-  %a.btn-boring(href="#" role="button") Boring Button
-  %a.btn-boring.btn-disabled(href="#" role="button") Boring Button
+  %a.btn.btn-boring(href="#" role="button") Boring Button
+  %a.btn.btn-boring(href="#" role="button" disabled) Boring Button
 
-  %a.btn-boring.btn-small(href="#" role="button") Boring Button
-  %a.btn-boring.btn-small.btn-disabled(href="#" role="button") Boring Button
+  %a.btn.btn-boring.btn-small(href="#" role="button") Boring Button
+  %a.btn.btn-boring.btn-small(href="#" role="button" disabled) Boring Button
 
 -# ========================================
 -# Alternate buttons
@@ -101,6 +94,31 @@
 
 .sg-alt-btns
 
-  %a.btn-alt.btn-large(href="#" role="button") Alternate Button
-  %a.btn-alt(href="#" role="button") Alternate Button
-  %a.btn-alt.btn-small(href="#" role="button") Alternate Button
+  %a.btn.btn-default.btn-alt.btn-large(href="#" role="button") Alternate Button
+  %a.btn.btn-default.btn-alt(href="#" role="button") Alternate Button
+  %a.btn.btn-default.btn-alt.btn-small(href="#" role="button") Alternate Button
+
+.sg-alt-btns
+
+  %a.btn.btn-success.btn-alt.btn-large(href="#" role="button") Alternate Button
+  %a.btn.btn-success.btn-alt(href="#" role="button") Alternate Button
+  %a.btn.btn-success.btn-alt.btn-small(href="#" role="button") Alternate Button
+
+.sg-alt-btns
+
+  %a.btn.btn-danger.btn-alt.btn-large(href="#" role="button") Alternate Button
+  %a.btn.btn-danger.btn-alt(href="#" role="button") Alternate Button
+  %a.btn.btn-danger.btn-alt.btn-small(href="#" role="button") Alternate Button
+
+-# ========================================
+-# Overlay buttons
+
+%h2 Overlay Buttons
+
+%p Overlay buttons are identified with the <code>.btn-overlay</code> class. They should only be used over an image background and do not include any disabled styles. 
+
+.sg-overlay-btns
+
+  %a.btn.btn-overlay.btn-large(href="#" role="button") Overlay Button
+  %a.btn.btn-overlay(href="#" role="button") Overlay Button
+  %a.btn.btn-overlay.btn-small(href="#" role="button") Overlay Button

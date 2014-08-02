@@ -3,9 +3,10 @@
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  # config.output_style = :compact
+  config.sass_options = {line_comments: false}
+end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -36,12 +37,13 @@
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def color_palette_class(color)
+    "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"
+  end
+end
 
+activate :autoprefixer
 activate :directory_indexes
 activate :livereload
 

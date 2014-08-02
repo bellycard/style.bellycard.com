@@ -6,21 +6,19 @@
   @extend .grid-2-12
 
   li
-    // TODO: Get the proper border-color
     border-bottom: 1px solid $slate-dark
 
   a
-    // TODO: Get the proper color
     @extend %color-gray
     @extend .display-block
-    @extend .pad-gutters
+    @extend .padding-gutters
     padding-bottom: 11px
     padding-top: 12px
-    text-decoration: none
+    @extend %text-decoration-none
     &:hover
       @extend %color-white
 
   .sg-nav-active a
     border-left: 4px solid $blue
     @extend %color-white
-    cursor: default
+    @extend %cursor-default

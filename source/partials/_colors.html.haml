@@ -19,42 +19,6 @@
     {var: "slate-dark",  hex: "1e1e21"}
   ]
 
-  @red_palette = [
-    {var: "red-light",    hex: "f7e2e2", alt: true},
-    {var: "red",          hex: "cb4e52"},
-    {var: "red-dark",     hex: "9c292d"}
-  ]
-
-  @gold_palette = [
-    {var: "gold-light",   hex: "fceddf", alt: true},
-    {var: "gold",         hex: "f3ae4e"},
-    {var: "gold-dark",    hex: "c07b1b"}
-  ]
-
-  @purple_palette = [
-    {var: "purple-light", hex: "cbd6f4", alt: true},
-    {var: "purple",       hex: "6479bf"},
-    {var: "purple-dark",  hex: "31468c"}
-  ]
-
-  @orange_palette = [
-    {var: "orange-light", hex: "f4d4c6", alt: true},
-    {var: "orange",       hex: "ed844a"},
-    {var: "orange-dark",  hex: "ba5117"}
-  ]
-
-  @green_palette = [
-    {var: "green-light",  hex: "c8edcd", alt: true},
-    {var: "green",        hex: "45ad60"},
-    {var: "green-dark",   hex: "127a2d"}
-  ]
-
-  @pink_palette = [
-    {var: "pink-light",   hex: "f2d1e3", alt: true},
-    {var: "pink",         hex: "d37295"},
-    {var: "pink-dark",    hex: "a03f62"}
-  ]
-
   @monochromatic_palette = [
     {var: "white",        hex: "fff",    alt: true},
     {var: "white-offset", hex: "f7f7f7", alt: true},
@@ -64,6 +28,40 @@
     {var: "black-offset", hex: "333"},
     {var: "black",        hex: "000"}
   ]
+
+  @secondary_pallets = [
+    [
+      {var: "red-light",    hex: "f7e2e2", alt: true},
+      {var: "red",          hex: "cb4e52"},
+      {var: "red-dark",     hex: "9c292d"}
+    ],
+    [
+      {var: "gold-light",   hex: "fceddf", alt: true},
+      {var: "gold",         hex: "f3ae4e"},
+      {var: "gold-dark",    hex: "c07b1b"}
+    ],
+    [
+      {var: "purple-light", hex: "cbd6f4", alt: true},
+      {var: "purple",       hex: "6479bf"},
+      {var: "purple-dark",  hex: "31468c"}
+    ],
+    [
+      {var: "orange-light", hex: "f4d4c6", alt: true},
+      {var: "orange",       hex: "ed844a"},
+      {var: "orange-dark",  hex: "ba5117"}
+    ],
+    [
+      {var: "green-light",  hex: "c8edcd", alt: true},
+      {var: "green",        hex: "45ad60"},
+      {var: "green-dark",   hex: "127a2d"}
+    ],
+    [
+      {var: "pink-light",   hex: "f2d1e3", alt: true},
+      {var: "pink",         hex: "d37295"},
+      {var: "pink-dark",    hex: "a03f62"}
+    ]
+  ]
+
 
 %h1 Colors
 
@@ -78,7 +76,7 @@
 
   - @primary_palette.each do |color|
     
-    %li.grid-1-2{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+    %li.grid-1-2{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
 
@@ -91,9 +89,10 @@
 
   - @blue_palette.each do |color|
     
-    %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+    %li.grid-1-1{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
+
 
 -# ========================================
 -# Slate Palette
@@ -104,7 +103,7 @@
 
   - @slate_palette.each do |color|
     
-    %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+    %li.grid-1-1{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
 
@@ -115,47 +114,12 @@
 
 .grid.sg-palette
 
-  %ul.grid-col.grid-1-3.margin-0
-    - @red_palette.each do |color|
-      
-      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
-        %code.sg-color-value $#{color[:var]}
-        %code.sg-color-value ##{color[:hex]}
-
-  %ul.grid-col.grid-1-3.margin-0
-    - @gold_palette.each do |color|
-      
-      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
-        %code.sg-color-value $#{color[:var]}
-        %code.sg-color-value ##{color[:hex]}
-
-  %ul.grid-col.grid-1-3.margin-0
-    - @purple_palette.each do |color|
-      
-      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
-        %code.sg-color-value $#{color[:var]}
-        %code.sg-color-value ##{color[:hex]}
-
-  %ul.grid-col.grid-1-3.margin-0
-    - @orange_palette.each do |color|
-      
-      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
-        %code.sg-color-value $#{color[:var]}
-        %code.sg-color-value ##{color[:hex]}
-
-  %ul.grid-col.grid-1-3.margin-0
-    - @green_palette.each do |color|
-      
-      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
-        %code.sg-color-value $#{color[:var]}
-        %code.sg-color-value ##{color[:hex]}
-
-  %ul.grid-col.grid-1-3.margin-0
-    - @pink_palette.each do |color|
-      
-      %li.grid-1-1{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
-        %code.sg-color-value $#{color[:var]}
-        %code.sg-color-value ##{color[:hex]}
+  - @secondary_pallets.each do |pallet|
+    %ul.grid-col.grid-1-3.margin-bottom
+      - pallet.each do |color|
+        %li.grid-1-1{class: color_palette_class(color)}
+          %code.sg-color-value $#{color[:var]}
+          %code.sg-color-value ##{color[:hex]}
 
 -# ========================================
 -# Monochromatic Palette
@@ -166,6 +130,6 @@
 
   - @monochromatic_palette.each do |color|
     
-    %li.grid-1-3{class: "sg-color#{"-alt" if (color[:alt] == true)} sg-color-#{color[:var]}"}
+    %li.grid-1-3{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
