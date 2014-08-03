@@ -2,9 +2,9 @@
 
 %h2 Grid System
 
-%p The grid may be divided into <code>whole</code>, <code>halfs</code>, <code>thirds</code>, <code>fourths</code>, <code>fifths</code>, <code>sixths</code>, <code>eighths</code>, <code>tenths</code>, and <code>twelths</code>.
+%p The grid may be divided into 12 columns.
 
-%p Each division comes with a set of classes <code>[.]</code> to identify the different widths. These classes may be used on an element directly or as an extend by way of the <code>@extend</code> rule. Class names may be singular or plural depending on how many columns you wish to span. For example, when creating a six column grid you may define an element that spans a single column with the class <code>.grid-1-6</code> or you may define an element that spans four columns with the class <code>.grid-4-6</code>.
+%p Each division comes with a set of classes <code>[.]</code> to identify the different widths. These classes may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
 
 %p Using a class to define the width alone will not create a grid system. Rows, or multiple rows, need to be wrapped in an element with the <code>.grid</code> class and elements with the defined width need to include the <code>.grid-col</code> class. Take the following example:
 
@@ -71,6 +71,22 @@
     %code .grid-1-6
 
 .grid.sg-grid
+  .grid-col.grid-1-7
+    %code .grid-1-7
+  .grid-col.grid-1-7
+    %code .grid-1-7
+  .grid-col.grid-1-7
+    %code .grid-1-7
+  .grid-col.grid-1-7
+    %code .grid-1-7
+  .grid-col.grid-1-7
+    %code .grid-1-7
+  .grid-col.grid-1-7
+    %code .grid-1-7
+  .grid-col.grid-1-7
+    %code .grid-1-7
+
+.grid.sg-grid
   .grid-col.grid-1-8
     %code .grid-1-8
   .grid-col.grid-1-8
@@ -87,6 +103,26 @@
     %code .grid-1-8
   .grid-col.grid-1-8
     %code .grid-1-8
+
+.grid.sg-grid
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
+  .grid-col.grid-1-9
+    %code .grid-1-9
 
 .grid.sg-grid
   .grid-col.grid-1-10
@@ -109,6 +145,30 @@
     %code .grid-1-10
   .grid-col.grid-1-10
     %code .grid-1-10
+
+.grid.sg-grid
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
+  .grid-col.grid-1-11
+    %code .grid-1-11
 
 .grid.sg-grid
   .grid-col.grid-1-12
@@ -180,6 +240,24 @@
     %code .grid-8-12
 
 -# ========================================
+-# Alignments
+
+%h2 Alignments
+
+%p Extendable vertical alignment silent classes <code>[%]</code> may be used by way of the <code>@extend</code> rule.
+
+%ul.sg-value-list
+  %li
+    Bottom
+    %code.sg-value-offset %vertical-align-bottom
+  %li
+    Middle
+    %code.sg-value-offset %vertical-align-middle
+  %li
+    Top
+    %code.sg-value-offset %vertical-align-top
+
+-# ========================================
 -# Displays
 
 %h2 Displays
@@ -193,6 +271,12 @@
   %li
     Inline-block
     %code.sg-value-offset .display-inline-block
+  %li
+    Table
+    %code.sg-value-offset .display-table
+  %li
+    Table-cell
+    %code.sg-value-offset .display-table-cell
   %li
     None
     %code.sg-value-offset .display-none
@@ -254,11 +338,17 @@
     Margin &ndash; 0
     %code.sg-value-offset .margin-0
   %li
+    Margin &ndash; Top
+    %code.sg-value-offset .margin-top
+  %li
+    Margin &ndash; Right
+    %code.sg-value-offset .margin-right
+  %li
     Margin &ndash; Bottom
     %code.sg-value-offset .margin-bottom
   %li
-    Margin &ndash; Top
-    %code.sg-value-offset .margin-top
+    Margin &ndash; Left
+    %code.sg-value-offset .margin-left
   %li
     Margins &ndash; 0 top &amp; bottom, auto left &amp; right
     %code.sg-value-offset .margin-auto
@@ -273,25 +363,31 @@
 %ul.sg-value-list
   %li
     Padding &ndash; 0
-    %code.sg-value-offset .pad-0
-  %li
-    Padding &ndash; Bottom
-    %code.sg-value-offset .pad-bottom
+    %code.sg-value-offset .padding-0
   %li
     Padding &ndash; Top
-    %code.sg-value-offset .pad-top
+    %code.sg-value-offset .padding-top
+  %li
+    Padding &ndash; Right
+    %code.sg-value-offset .padding-right
+  %li
+    Padding &ndash; Bottom
+    %code.sg-value-offset .padding-bottom
+  %li
+    Padding &ndash; Left
+    %code.sg-value-offset .padding-left
   %li
     Gutter padding &ndash; Left &amp; right
-    %code.sg-value-offset .pad-gutters
+    %code.sg-value-offset .padding-gutters
   %li
     Half gutters padding &ndash; Left &amp; right
-    %code.sg-value-offset .pad-gutters-half
+    %code.sg-value-offset .padding-gutters-half
   %li
     Baseline padding &ndash; Top &amp; bottom
-    %code.sg-value-offset .pad-baselines
+    %code.sg-value-offset .padding-baselines
   %li
     Box padding &ndash; Top, right, bottom &amp; left
-    %code.sg-value-offset .pad-box
+    %code.sg-value-offset .padding-box
 
 -# ========================================
 -# Misc

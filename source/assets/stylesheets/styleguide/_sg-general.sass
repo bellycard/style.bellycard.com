@@ -11,14 +11,14 @@ body
 
 .sg-section,
 .sg-section-alt
-  @extend .pad-box
+  @extend .padding-box
 
 .sg-section
-  border-bottom: 5px solid $white-offset
-  margin-bottom: $line-height-base - 5px
+  +rem(border-bottom, 5px solid $white-offset)
+  +rem(margin-bottom, $baseline-base - 5px)
 
 .sg-value-list
-  @extend .list-none
+  @extend .margin-bottom
 
 .sg-value-offset
   @extend .pull-right
