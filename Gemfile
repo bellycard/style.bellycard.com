@@ -10,7 +10,7 @@ gem "middleman-livereload"
 
 # Belly style rolodex
 # gem "rolodex", :path => "~/Documents/Repositories/bellycard/rolodex"
-gem "rolodex", :git => "git@github.com:bellycard/rolodex.git", :ref => "844c80e000724240d748a195190184116633eed4"
+gem "rolodex", :github => "bellycard/rolodex"
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
