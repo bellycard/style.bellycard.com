@@ -111,21 +111,6 @@
 -# ========================================
 -# Line heights
 
-%h2 Miscellaneous Type Styles
-
-%p Miscellaneous typography styles, all of which include an extendable silent class <code>[%]</code>.
-
-%ul.sg-value-list
-  %li
-    Center Text
-    %code.sg-value-offset %text-center
-  %li
-    Remove Text Decorations
-    %code.sg-value-offset %text-decoration-none
-
--# ========================================
--# Line heights
-
 %h2 Line Heights
 
 %p There are four line heights available, each of which included a variable <code>[$]</code> and an extendable silent class <code>[%]</code>. When using a line height outright please use the <code>@extend</code> rule, however should computation be needed feel free to use one of the variables.
@@ -145,3 +130,18 @@
   %li.sg-type-height-tallest
     Tallest &ndash; 42px
     %code.sg-value-offset [$baseline-, %line-height-]tallest
+
+-# ========================================
+-# Miscellaneous
+
+%h2 Miscellaneous Type Styles
+
+%p Miscellaneous typography styles, all of which include an extendable silent class <code>[%]</code>.
+
+%ul.sg-value-list
+  %li
+    Center Text
+    %code.sg-value-offset %text-center
+  %li
+    Remove Text Decorations
+    %code.sg-value-offset %text-decoration-none
