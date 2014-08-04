@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bellycard/rolodex.git
-  revision: 7796c519fceb3910557d358fb93e3ba100e4cdb7
+  revision: 33843c1915b6465720eee80defff0b775ce147a8
   specs:
     rolodex (0.0.1)
       autoprefixer-rails
