@@ -1,102 +1,103 @@
 %h1 Dropdowns
 
-.group.margin-bottom
-  %strong Solo Caret
+%div(ng-controller="dropDownCtrl")
+  .group.margin-bottom
+    %strong Solo Caret
 
-  .dropdown
-    
-    %button.btn.btn-boring.dropdown-toggle.dropdown-toggle-solo(type="button")
-      .caret
+    .dropdown(dropdown)
 
-    / %ul.dropdown-menu(role="menu")
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Action
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Another action
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Something else here
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Separated link
+      %button.btn.btn-boring.dropdown-toggle.dropdown-toggle-solo(type="button" dropdown-toggle)
+        .caret
 
-.group.margin-bottom
-  %strong Including Text
+      %ul.dropdown-menu(role="menu")
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Another action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Something else here
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Separated link
 
-  .dropdown.grid-1-3
-    
-    %button.btn.btn-boring.dropdown-toggle.grid-1-1(type="button")
-      Dropdown
-      .caret
+  .group.margin-bottom
+    %strong Including Text
 
-    / %ul.dropdown-menu(role="menu")
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Action
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Another action
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Something else here
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Separated link
+    .dropdown.grid-1-3(dropdown)
 
-.group.margin-bottom
-  %strong Positioned to the Right
+      %button.btn.btn-boring.dropdown-toggle.grid-1-1(type="button" dropdown-toggle)
+        Dropdown
+        .caret
 
-  .dropdown.dropdown-right
-    
-    %button.btn.btn-boring.dropdown-toggle(type="button")
-      Dropdown
-      .caret
+      %ul.dropdown-menu(role="menu")
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Another action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Something else here
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Separated link
 
-    / %ul.dropdown-menu(role="menu")
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Action
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Another action
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Something else here
-    /   %li.dropdown-menu-item(role="presentation")
-    /     %a(role="menuitem" href="#") Separated link
+  .group.margin-bottom
+    %strong Positioned to the Right
 
-%strong Within a Form
+    .dropdown.dropdown-right(dropdown)
 
-%form.grid-1-3(role="form")
-  .form-group
-    .form-row
-      %label.form-label Name
-      
-      .form-btn.dropdown
-        %button.btn.btn-boring.dropdown-toggle(type="button")
-          Dropdown
-          .caret
+      %button.btn.btn-boring.dropdown-toggle(type="button" dropdown-toggle)
+        Dropdown
+        .caret
 
-        / %ul.dropdown-menu(role="menu")
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Action
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Another action
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Something else here
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Separated link
+      %ul.dropdown-menu(role="menu")
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Another action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Something else here
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Separated link
 
-%form.grid-1-3(role="form")
-  .form-group
-    .form-row
-      %label.form-label Password
+  %strong Within a Form
 
-      .form-btn.dropdown
-        %button.btn.btn-boring.dropdown-toggle(type="button")
-          Dropdown
-          .caret
+  %form.grid-1-3(role="form")
+    .form-group
+      .form-row
+        %label.form-label Name
 
-        / %ul.dropdown-menu(role="menu")
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Action
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Another action
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Something else here
-        /   %li.dropdown-menu-item(role="presentation")
-        /     %a(role="menuitem" href="#") Separated link
-      
-      .form-btn
-        %button.btn.btn-default(type="submit") Login
+        .form-btn.dropdown(dropdown)
+          %button.btn.btn-boring.dropdown-toggle(type="button" dropdown-toggle)
+            Dropdown
+            .caret
+
+          %ul.dropdown-menu(role="menu")
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Action
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Another action
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Something else here
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Separated link
+
+  %form.grid-1-3(role="form")
+    .form-group
+      .form-row
+        %label.form-label Password
+
+        .form-btn.dropdown(dropdown)
+          %button.btn.btn-boring.dropdown-toggle(type="button" dropdown-toggle)
+            Dropdown
+            .caret
+
+          %ul.dropdown-menu(role="menu")
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Action
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Another action
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Something else here
+            %li.dropdown-menu-item(role="presentation")
+              %a(role="menuitem" href="#") Separated link
+
+        .form-btn
+          %button.btn.btn-default(type="submit") Login
