@@ -8,10 +8,12 @@ gem "middleman-s3_sync"
 # Live-reloading plugin
 gem "middleman-livereload"
 
-gem 'pry'
-
 # Belly style rolodex
-gem "rolodex", :github => "bellycard/rolodex"
+gem "rolodex", :path => "~/Documents/Repositories/bellycard/rolodex"
+# gem "rolodex", :github => "bellycard/rolodex"
+
+# Ruby debugger
+gem 'pry'
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
