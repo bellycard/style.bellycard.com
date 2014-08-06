@@ -4,12 +4,12 @@
   .group.margin-bottom
     %strong Solo Caret
 
-    .dropdown(data-dropdown)
+    .dropdown(data-dropdown data-dropdown-toggle)
 
-      %button.btn.btn-boring.dropdown-toggle.dropdown-toggle-solo(type="button" data-dropdown-toggle)
-        .caret
+      %button.dropdown-toggle.dropdown-toggle-solo
 
-      %ul.dropdown-menu(role="menu")
+      %ul.dropdown-menu(role="menu" data-dropdown-content)
+
         %li.dropdown-menu-item(role="presentation")
           %a(role="menuitem" href="#") Action
         %li.dropdown-menu-item(role="presentation")
@@ -22,13 +22,12 @@
   .group.margin-bottom
     %strong Including Text
 
-    .dropdown.grid-1-3(data-dropdown)
+    .dropdown.grid-1-3(data-dropdown data-dropdown-toggle)
 
-      %button.btn.btn-boring.dropdown-toggle.grid-1-1(type="button" data-dropdown-toggle)
-        Dropdown
-        .caret
+      %button.dropdown-toggle.grid-1-1 Dropdown
 
-      %ul.dropdown-menu(role="menu")
+      %ul.dropdown-menu(role="menu" data-dropdown-content)
+
         %li.dropdown-menu-item(role="presentation")
           %a(role="menuitem" href="#") Action
         %li.dropdown-menu-item(role="presentation")
@@ -41,13 +40,12 @@
   .group.margin-bottom
     %strong Positioned to the Right
 
-    .dropdown.dropdown-right(data-dropdown)
+    .dropdown.dropdown-right(data-dropdown data-dropdown-toggle)
 
-      %button.btn.btn-boring.dropdown-toggle(type="button" data-dropdown-toggle)
-        Dropdown
-        .caret
+      %button.dropdown-toggle Dropdown
 
-      %ul.dropdown-menu(role="menu")
+      %ul.dropdown-menu(role="menu" data-dropdown-content)
+
         %li.dropdown-menu-item(role="presentation")
           %a(role="menuitem" href="#") Action
         %li.dropdown-menu-item(role="presentation")
@@ -60,16 +58,32 @@
   %strong Within a Form
 
   %form.grid-1-3(role="form")
+
+    .form-group
+
+      .dropdown.grid-1-1(data-dropdown data-dropdown-toggle)
+        
+        %input.form-control(type="text" placeholder="Your name")
+
+        %ul.dropdown-menu(role="menu" data-dropdown-content)
+          %li.dropdown-menu-item(role="presentation")
+            %a(role="menuitem" href="#") Action
+          %li.dropdown-menu-item(role="presentation")
+            %a(role="menuitem" href="#") Another action
+          %li.dropdown-menu-item(role="presentation")
+            %a(role="menuitem" href="#") Something else here
+          %li.dropdown-menu-item(role="presentation")
+            %a(role="menuitem" href="#") Separated link
+
     .form-group
       .form-row
-        %label.form-label Name
+        %label.form-label(for="sg-form-row-email-dropdown") Email
+        
+        .dropdown(data-dropdown data-dropdown-toggle)
 
-        .form-btn.dropdown(data-dropdown)
-          %button.btn.btn-boring.dropdown-toggle(type="button" data-dropdown-toggle)
-            Dropdown
-            .caret
+          %input.form-control#sg-form-row-email-dropdown(type="email" placeholder="Enter email")
 
-          %ul.dropdown-menu(role="menu")
+          %ul.dropdown-menu(role="menu" data-dropdown-content)
             %li.dropdown-menu-item(role="presentation")
               %a(role="menuitem" href="#") Action
             %li.dropdown-menu-item(role="presentation")
@@ -79,17 +93,15 @@
             %li.dropdown-menu-item(role="presentation")
               %a(role="menuitem" href="#") Separated link
 
-  %form.grid-1-3(role="form")
     .form-group
       .form-row
-        %label.form-label Password
+        %label.form-label(for="sg-form-inline-password-dropdown") Password
+        
+        .dropdown(data-dropdown data-dropdown-toggle)
 
-        .form-btn.dropdown(data-dropdown)
-          %button.btn.btn-boring.dropdown-toggle(type="button" data-dropdown-toggle)
-            Dropdown
-            .caret
+          %input.form-control#sg-form-inline-password-dropdown(type="password" placeholder="Password")
 
-          %ul.dropdown-menu(role="menu")
+          %ul.dropdown-menu(role="menu" data-dropdown-content)
             %li.dropdown-menu-item(role="presentation")
               %a(role="menuitem" href="#") Action
             %li.dropdown-menu-item(role="presentation")
