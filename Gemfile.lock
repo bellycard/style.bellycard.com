@@ -1,10 +1,11 @@
 GIT
   remote: git://github.com/bellycard/rolodex.git
-  revision: 33843c1915b6465720eee80defff0b775ce147a8
+  revision: 8414f2b7d4b4e24d8cadd915a0d66ec2c5db5d82
   specs:
     rolodex (0.0.1)
+      angular-html2js
       autoprefixer-rails
-      compass (~> 1.0.0.alpha)
+      compass (~> 1.0.0.rc.0)
       middleman-autoprefixer
       sass (>= 3.3.10)
 
@@ -17,6 +18,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angular-html2js (0.0.4)
+      sprockets (~> 2.0)
+      tilt (~> 1.0)
     autoprefixer-rails (2.2.0.20140727)
       execjs
     builder (3.2.2)
@@ -36,7 +40,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       sass (>= 3.3.13, < 3.5)
-    compass-core (1.0.0.rc.0)
+    compass-core (1.0.0.rc.1)
       multi_json (~> 1.0)
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.4)
@@ -128,7 +132,7 @@ GEM
       pmap
       ruby-progressbar
       unf
-    middleman-sprockets (3.3.5)
+    middleman-sprockets (3.3.6)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
       sprockets-helpers (~> 1.1.0)
@@ -193,7 +197,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman
+  middleman (~> 3.3.4)
   middleman-livereload
   middleman-s3_sync
   pry
