@@ -1,4 +1,4 @@
-angular.module('rolodexAngular.dropDowns', ['rolodex.dropDown'])
+angular.module('rolodexAngular.dropdowns', ['rolodex.dropdown'])
 
-.controller 'dropDownCtrl', ($scope) ->
+.controller 'dropdownCtrl', ($scope) ->
   return
