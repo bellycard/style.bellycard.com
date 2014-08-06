@@ -9,8 +9,7 @@ gem "middleman-s3_sync"
 gem "middleman-livereload"
 
 # Belly style rolodex
-gem "rolodex", :path => "~/Documents/Repositories/bellycard/rolodex"
-# gem "rolodex", :github => "bellycard/rolodex"
+gem "rolodex", :github => "bellycard/rolodex"
 
 # Ruby debugger
 gem 'pry'
