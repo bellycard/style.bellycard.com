@@ -3,6 +3,6 @@
 #= require_tree './src'
 
 angular.module('rolodexAngular', [
-  'rolodexAngular.dropDowns'
+  'rolodexAngular.dropdowns'
   'rolodexAngular.modal'
 ])
