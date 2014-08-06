@@ -2,14 +2,15 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman"
+gem "middleman", '~>3.3.4'
 gem "middleman-s3_sync"
 
 # Live-reloading plugin
 gem "middleman-livereload"
 
+gem 'pry'
+
 # Belly style rolodex
-# gem "rolodex", :path => "~/Documents/Repositories/bellycard/rolodex"
 gem "rolodex", :github => "bellycard/rolodex"
 
 # For faster file watcher updates:
