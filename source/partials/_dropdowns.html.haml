@@ -1,6 +1,7 @@
 %h1 Dropdowns
 
 %div(ng-controller="dropdownCtrl")
+
   .group.margin-bottom
     %strong Solo Caret
 
@@ -43,6 +44,24 @@
     .dropdown.dropdown-right(data-dropdown data-dropdown-toggle)
 
       %button.dropdown-toggle Dropdown
+
+      %ul.dropdown-menu(role="menu" data-dropdown-content)
+
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Another action
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Something else here
+        %li.dropdown-menu-item(role="presentation")
+          %a(role="menuitem" href="#") Separated link
+
+  .group.margin-bottom
+    %strong Random Element without a Caret
+
+    .dropdown-alt(data-dropdown data-dropdown-toggle)
+
+      %button.btn.btn-default Random Button
 
       %ul.dropdown-menu(role="menu" data-dropdown-content)
 
