@@ -5,7 +5,7 @@ angular.module('rolodexAngular.modal', ['rolodex.modal'])
     modal = $modal.open
       template: '''
         <div class="modal-header">
-          <button aria-hidden="true" class="close" type="button" ng-click="close()">×</button>
+          <button aria-hidden="true" class="i-close" type="button" ng-click="close()">×</button>
           <div class="h-bravo">Modal Title</div>
         </div>
         <div class="modal-body">
