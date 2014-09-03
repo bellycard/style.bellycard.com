@@ -5,32 +5,43 @@
 .margin-bottom
 
   .alert-banner.alert-success(role="alert")
-    This is a success message. Hooray!
+    %strong.alert-signal Woot!
+    This is a success message.
 
-  .alert-banner.alert-warning.alert-dismissible(role="alert")
-    %button.i-close(type="button" aria-hidden="true") &times;
-    This is a warning message. Be careful.
-
-  .alert-banner.alert-danger.alert-dismissible(role="alert")
-    %button.i-close(type="button" aria-hidden="true") &times;
-    This is a danger message. Hmmmmm.
+  .alert-banner.alert-warning(role="alert")
+    %strong.alert-signal Warning!
+    This is an warning message.
+    %a.alert-action(href="#") Action
 
   .alert-banner.alert-default.alert-dismissible(role="alert")
     %button.i-close(type="button" aria-hidden="true") &times;
-    Good work. Please carry on.
+    %strong.alert-signal Hey there!
+    This is a default Belly message.
+    %a.alert-action(href="#") Action
+
+  .alert-banner.alert-danger.alert-dismissible(role="alert")
+    %button.i-close(type="button" aria-hidden="true") &times;
+    %strong.alert-signal Alert!
+    This is an danger message.
 
 %h2 Inline Alerts
 
 .margin-bottom
 
   .alert-inline.alert-success(role="alert")
-    Hooray, it&#8217;s a success!
+    %strong.alert-signal Woot!
+    It&#8217;s a success!
 
-  .alert-inline.alert-warning(role="alert")
-    Warning text.
+  .alert-inline.alert-warning.alert-dismissible(role="alert")
+    %strong.alert-signal Warning!
+    Proceed with caution.
+    
+  .alert-inline.alert-default.alert-dismissible(role="alert")
+    %strong.alert-signal Hey there!
+    Lighthouses rule.
 
-  .alert-inline.alert-danger(role="alert")
-    Danger! Oh no!
+  .alert-inline.alert-danger.alert-dismissible(role="alert")
+    %strong.alert-signal Oh no!
+    There was an error.
 
-  .alert-inline.alert-default(role="alert")
-    General text goes here.
+
