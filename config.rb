@@ -43,7 +43,10 @@ helpers do
   end
 end
 
-activate :autoprefixer
+activate :autoprefixer do |config|
+  config.browsers = ['last 3 versions', 'Explorer >= 8']
+end
+
 activate :directory_indexes
 activate :livereload
 
