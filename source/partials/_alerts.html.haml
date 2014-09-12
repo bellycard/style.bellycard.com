@@ -23,6 +23,9 @@
     %button.i-close(type="button" aria-hidden="true") &times;
     %strong.alert-signal Alert!
     This is an danger message.
+    Caution,
+    = succeed "." do
+      %a(href="#") I&#8217;m a link
 
 %h2 Inline Alerts
 
@@ -32,16 +35,17 @@
     %strong.alert-signal Woot!
     It&#8217;s a success!
 
-  .alert-inline.alert-warning.alert-dismissible(role="alert")
+  .alert-inline.alert-warning(role="alert")
     %strong.alert-signal Warning!
     Proceed with caution.
-    
-  .alert-inline.alert-default.alert-dismissible(role="alert")
+
+  .alert-inline.alert-default(role="alert")
     %strong.alert-signal Hey there!
     Lighthouses rule.
 
-  .alert-inline.alert-danger.alert-dismissible(role="alert")
+  .alert-inline.alert-danger(role="alert")
     %strong.alert-signal Oh no!
     There was an error.
-
-
+    Caution,
+    = succeed "." do
+      %a(href="#") I&#8217;m a link
