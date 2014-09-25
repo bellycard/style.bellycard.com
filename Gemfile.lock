@@ -1,12 +1,12 @@
 GIT
   remote: git://github.com/bellycard/rolodex.git
-  revision: dfeed185a41e6d330e0478beec0cc8fb1d5b564d
+  revision: bd6777f1c1e8f159f6b71eaa97cb03f8930025c1
   specs:
     rolodex (0.0.1)
       angular-html2js
-      autoprefixer-rails
       middleman-autoprefixer
       sass (~> 3.4.3)
+      sprockets (~> 2.12.2)
 
 GEM
   remote: http://rubygems.org/
@@ -20,7 +20,7 @@ GEM
     angular-html2js (0.0.4)
       sprockets (~> 2.0)
       tilt (~> 1.0)
-    autoprefixer-rails (3.0.1.20140826)
+    autoprefixer-rails (3.1.0.20140911)
       execjs
     builder (3.2.2)
     celluloid (0.16.0)
@@ -49,9 +49,9 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.39.5)
+    excon (0.39.6)
     execjs (2.2.1)
-    ffi (1.9.3)
+    ffi (1.9.4)
     fog (1.23.0)
       fog-brightbox
       fog-core (~> 1.23)
@@ -59,7 +59,7 @@ GEM
       fog-softlayer
       ipaddress (~> 0.5)
       nokogiri (~> 1.5, >= 1.5.11)
-    fog-brightbox (0.5.0)
+    fog-brightbox (0.5.1)
       fog-core (~> 1.22)
       fog-json
       inflecto
@@ -87,28 +87,28 @@ GEM
     inflecto (0.0.2)
     ipaddress (0.8.0)
     json (1.8.1)
-    kramdown (1.4.1)
+    kramdown (1.4.2)
     listen (2.7.9)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     map (6.5.5)
     method_source (0.8.2)
-    middleman (3.3.5)
+    middleman (3.3.6)
       coffee-script (~> 2.2)
-      compass (>= 0.12.4)
+      compass (>= 1.0.0, < 2.0.0)
       compass-import-once (= 1.0.5)
       execjs (~> 2.0)
       haml (>= 4.0.5)
       kramdown (~> 1.2)
-      middleman-core (= 3.3.5)
+      middleman-core (= 3.3.6)
       middleman-sprockets (>= 3.1.2)
-      sass (>= 3.2.17, < 4.0)
+      sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-autoprefixer (2.2.0)
-      autoprefixer-rails (~> 3.0.0)
+    middleman-autoprefixer (2.2.1)
+      autoprefixer-rails (~> 3.1.0)
       middleman-core (>= 3.3.3)
-    middleman-core (3.3.5)
+    middleman-core (3.3.6)
       activesupport (~> 4.1.0)
       bundler (~> 1.1)
       erubis
@@ -165,9 +165,9 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    ruby-progressbar (1.5.1)
+    ruby-progressbar (1.6.0)
     ruby18_source_location (0.2)
-    sass (3.4.3)
+    sass (3.4.5)
     slop (3.6.0)
     sprockets (2.12.2)
       hike (~> 1.2)
