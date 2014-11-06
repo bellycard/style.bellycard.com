@@ -6,19 +6,17 @@ body
 
 .sg-main
   @extend %background-white
-  @extend .grid-col
-  @extend .grid-10-12
 
 .sg-section,
 .sg-section-alt
-  @extend .padding-box
+  @extend %padding-box
 
 .sg-section
   +rem(border-bottom, 5px solid $white-offset)
   +rem(margin-bottom, $baseline-base - 5px)
 
 .sg-value-list
-  @extend .margin-bottom
+  @extend %margin-bottom
 
 .sg-value-offset
-  @extend .pull-right
+  @extend %pull-right
