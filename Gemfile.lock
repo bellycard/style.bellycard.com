@@ -198,7 +198,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (~> 3.3.4)
+  middleman
+  middleman-autoprefixer
   middleman-livereload
   middleman-s3_sync
   pry
