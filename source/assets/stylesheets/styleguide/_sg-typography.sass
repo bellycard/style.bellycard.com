@@ -49,14 +49,14 @@
 
 .sg-type-height-small
   background-color: $white-offset
-  @extend %line-height-small
+  +rem(line-height, $baseline-small)
 
 .sg-type-height-base
-  @extend %line-height-base
+  +rem(line-height, $baseline-base)
 
 .sg-type-height-large
   background-color: $white-offset
-  @extend %line-height-large
+  +rem(line-height, $baseline-large)
 
 .sg-type-height-xx-large
-  @extend %line-height-xx-large
+  +rem(line-height, $baseline-xx-large)

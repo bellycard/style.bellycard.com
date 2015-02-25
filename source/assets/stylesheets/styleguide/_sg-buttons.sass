@@ -4,11 +4,11 @@
 .sg-alt-btns,
 .sg-overlay-btns
   @extend %border-radius-base
-  @extend %padding-box
+  +cushion(padding, box)
 
 .sg-alt-btns
   background-color: $blue
-  @extend %margin-bottom
+  +rem(margin-bottom, $baseline-base)
 
 .sg-overlay-btns
   background: linear-gradient($blue, $green, $red)

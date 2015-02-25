@@ -9,14 +9,14 @@ body
 
 .sg-section,
 .sg-section-alt
-  @extend %padding-box
+  +cushion(padding, box)
 
 .sg-section
   +rem(border-bottom, 5px solid $white-offset)
   +rem(margin-bottom, $baseline-base - 5px)
 
 .sg-value-list
-  @extend %margin-bottom
+  +rem(margin-bottom, $baseline-base)
 
 .sg-value-offset
   float: right
