@@ -7,17 +7,17 @@
     +rem(border-bottom, 1px solid $slate-dark)
 
   a
-    @extend %color-gray
-    @extend %display-block
+    color: $gray
+    display: block
     @extend %padding-gutters
     +rem(padding-bottom, 11px)
     +rem(padding-top, 12px)
-    @extend %text-decoration-none
+    text-decoration: none
     
     &:hover
-      @extend %color-white
+      color: $white
 
   .sg-nav-active a
     +rem(border-left, 4px solid $blue)
-    @extend %color-white
-    @extend %cursor-default
+    color: $white
+    cursor: default

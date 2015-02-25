@@ -5,30 +5,32 @@
   @extend %margin-bottom
 
 .sg-color-value
-  @extend %display-block
+  display: block
 
   .sg-color &
-    @extend %color-white
+    color: $white
 
   .sg-color-alt &
-    @extend %color-black
+    color: $black
 
 // Brand palettes
 
 @each $palette in map-keys($brand-palettes)
   @each $color in map-keys(map-get($brand-palettes, $palette))
 
+    $background-color: map-get(map-get($brand-palettes, $palette), $color)
+
     @if $color == "base"
       .sg-color-#{$palette}
-        @extend %background-#{$palette}
+        background-color: $background-color
     
     @else
       .sg-color-#{$palette}-#{$color}
-        @extend %background-#{$palette}-#{$color}
+        background-color: $background-color
 
 // Monochromatic palette
 
 @each $color in map-keys($monochromatic-palette)
 
   .sg-color-#{$color}
-    @extend %background-#{$color}
+    background-color: map-get($monochromatic-palette, $color)
