@@ -18,22 +18,97 @@
 
 // Brand palettes
 
-@each $palette in map-keys($brand-palettes)
-  @each $color in map-keys(map-get($brand-palettes, $palette))
+.sg-color-blue
+  background-color: $blue
 
-    $background-color: map-get(map-get($brand-palettes, $palette), $color)
+.sg-color-blue-light
+  background-color: $blue-light
 
-    @if $color == "base"
-      .sg-color-#{$palette}
-        background-color: $background-color
-    
-    @else
-      .sg-color-#{$palette}-#{$color}
-        background-color: $background-color
+.sg-color-blue-dark
+  background-color: $blue-dark
+
+.sg-color-slate
+  background-color: $slate
+
+.sg-color-slate-light
+  background-color: $slate-light
+
+.sg-color-slate-dark
+  background-color: $slate-dark
+
+.sg-color-red
+  background-color: $red
+
+.sg-color-red-light
+  background-color: $red-light
+
+.sg-color-red-dark
+  background-color: $red-dark
+
+.sg-color-gold
+  background-color: $gold
+
+.sg-color-gold-light
+  background-color: $gold-light
+
+.sg-color-gold-dark
+  background-color: $gold-dark
+
+.sg-color-purple
+  background-color: $purple
+
+.sg-color-purple-light
+  background-color: $purple-light
+
+.sg-color-purple-dark
+  background-color: $purple-dark
+
+.sg-color-orange
+  background-color: $orange
+
+.sg-color-orange-light
+  background-color: $orange-light
+
+.sg-color-orange-dark
+  background-color: $orange-dark
+
+.sg-color-green
+  background-color: $green
+
+.sg-color-green-light
+  background-color: $green-light
+
+.sg-color-green-dark
+  background-color: $green-dark
+
+.sg-color-pink
+  background-color: $pink
+
+.sg-color-pink-light
+  background-color: $pink-light
+
+.sg-color-pink-dark
+  background-color: $pink-dark
 
 // Monochromatic palette
 
-@each $color in map-keys($monochromatic-palette)
+.sg-color-white
+  background-color: $white
 
-  .sg-color-#{$color}
-    background-color: map-get($monochromatic-palette, $color)
+.sg-color-white-offset
+  background-color: $white-offset
+
+.sg-color-gray-light
+  background-color: $gray-light
+
+.sg-color-gray
+  background-color: $gray
+
+.sg-color-gray-dark
+  background-color: $gray-dark
+
+.sg-color-black-offset
+  background-color: $black-offset
+
+.sg-color-black
+  background-color: $black
