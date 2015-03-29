@@ -16,11 +16,10 @@ gem "middleman-autoprefixer"
 gem "middleman-imageoptim"
 
 # Belly style rolodex
-# gem "rolodex", github: "bellycard/rolodex"
-gem "rolodex", path: "~/Documents/Repositories/bellycard/rolodex"
+gem "rolodex", "2.0.0"
 
 # Ruby debugger
-gem 'pry'
+gem "pry"
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
