@@ -2,9 +2,9 @@
 // ========================================
 
 .sg-grid-col
-  @extend %background-white-offset
-  @extend %border-base
+  background-color: $white-offset
+  +rem(border, 1px solid $gray-light)
   +rem(padding, 11px 14px)
 
 .sg-grid
-  @extend %margin-bottom
+  +rem(margin-bottom, $baseline-base)

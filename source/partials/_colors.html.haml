@@ -76,7 +76,7 @@
 
   - @primary_palette.each do |color|
     
-    %li.grid-col.grid-1-2.padding-box{class: color_palette_class(color)}
+    %li.grid-col.grid-1-2{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
 
@@ -89,7 +89,7 @@
 
   - @blue_palette.each do |color|
     
-    %li.grid-col.grid-1-1.padding-box{class: color_palette_class(color)}
+    %li.grid-col.grid-1-1{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
 
@@ -103,7 +103,7 @@
 
   - @slate_palette.each do |color|
     
-    %li.grid-col.grid-1-1.padding-box{class: color_palette_class(color)}
+    %li.grid-col.grid-1-1{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}
 
@@ -115,9 +115,9 @@
 .grid.sg-palette
 
   - @secondary_pallets.each do |pallet|
-    %ul.grid-col.grid-1-3.margin-bottom
+    %ul.grid-col.grid-1-3
       - pallet.each do |color|
-        %li.grid-col.grid-1-1.padding-box{class: color_palette_class(color)}
+        %li.grid-col.grid-1-1{class: color_palette_class(color)}
           %code.sg-color-value $#{color[:var]}
           %code.sg-color-value ##{color[:hex]}
 
@@ -130,6 +130,6 @@
 
   - @monochromatic_palette.each do |color|
     
-    %li.grid-col.grid-1-3.padding-box{class: color_palette_class(color)}
+    %li.grid-col.grid-1-3{class: color_palette_class(color)}
       %code.sg-color-value $#{color[:var]}
       %code.sg-color-value ##{color[:hex]}

@@ -15,18 +15,18 @@
 
 .sg-heading
   code 
-    @extend %font-weight-normal
+    font-weight: 400
 
 // Font families
 
 .sg-type-families-open-sans
-  @extend %font-family-open-sans
+  font-family: $font-family-open-sans
 
 .sg-type-families-helvetica
-  @extend %font-family-helvetica
+  font-family: $font-family-helvetica
 
 .sg-type-families-monospace
-  @extend %font-family-monospace
+  font-family: $font-family-monospace
 
 // Font weights
 
@@ -34,29 +34,29 @@
 .sg-type-weight-normal,
 .sg-type-weight-book
   code
-    @extend %font-weight-normal
+    font-weight: 400
 
 .sg-type-weight-bold
-  @extend %font-weight-bold
+  font-weight: 600
 
 .sg-type-weight-normal
-  @extend %font-weight-normal
+  font-weight: 400
 
 .sg-type-weight-book
-  @extend %font-weight-book
+  font-weight: 300
 
 // Line heights
 
 .sg-type-height-small
-  @extend %background-white-offset
-  @extend %line-height-small
+  background-color: $white-offset
+  +rem(line-height, $baseline-small)
 
 .sg-type-height-base
-  @extend %line-height-base
+  +rem(line-height, $baseline-base)
 
 .sg-type-height-large
-  @extend %background-white-offset
-  @extend %line-height-large
+  background-color: $white-offset
+  +rem(line-height, $baseline-large)
 
 .sg-type-height-xx-large
-  @extend %line-height-xx-large
+  +rem(line-height, $baseline-xx-large)

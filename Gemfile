@@ -7,15 +7,19 @@ gem "middleman-s3_sync"
 
 # Live-reloading plugin
 gem "middleman-livereload"
+gem "middleman-minify-html"
 
 # Autoprefixer
 gem "middleman-autoprefixer"
 
+# Minification and optimization
+gem "middleman-imageoptim"
+
 # Belly style rolodex
-gem "rolodex", github: "bellycard/rolodex"
+gem "rolodex", "2.0.0"
 
 # Ruby debugger
-gem 'pry'
+gem "pry"
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows

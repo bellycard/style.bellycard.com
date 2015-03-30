@@ -2,21 +2,24 @@
 // ========================================
 
 body
-  @extend %background-slate
+  background-color: $slate
 
 .sg-main
-  @extend %background-white
+  background-color: $white
 
 .sg-section,
 .sg-section-alt
-  @extend %padding-box
+  +bump(padding, box)
 
 .sg-section
   +rem(border-bottom, 5px solid $white-offset)
   +rem(margin-bottom, $baseline-base - 5px)
 
+.sg-break
+  +rem(margin-bottom, $baseline-base)
+
 .sg-value-list
-  @extend %margin-bottom
+  +rem(margin-bottom, $baseline-base)
 
 .sg-value-offset
-  @extend %pull-right
+  float: right

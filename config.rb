@@ -60,17 +60,20 @@ configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
 
+  # Minify HTML on build
+  activate :minify_html
+
   # Minify Javascript on build
   activate :minify_javascript
 
+  # Optmize images
+  activate :imageoptim
+
+  # GZip all the things
+  activate :gzip
+
   # Enable cache buster
   activate :asset_hash
-
-  # Optimize images
-  activate :imageoptim
-  
-  # Gzip
-  activate :gzip
 
   # Use relative URLs
   # activate :relative_assets
