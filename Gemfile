@@ -16,7 +16,7 @@ gem "middleman-autoprefixer"
 gem "middleman-imageoptim"
 
 # Belly style rolodex
-gem "rolodex", "2.0.0"
+gem "rolodex", "2.0.1"
 
 # Ruby debugger
 gem "pry"
