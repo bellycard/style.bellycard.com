@@ -5,9 +5,19 @@
 
 %h2 Scale
 
-%p All font sizes include an extendable class <code>[.]</code>, of which start with <code>h-</code> followed by the font size name. These classes may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
+%p We use a typographic scale, most notably made famous by Robert Bringhurst. One off, large sizes to be used for hero, leader, or introduction sections are named <code>s-giga</code> and <code>s-mega</code>. General font sizes used across all headings and default text are named after the phonetic alphabet, <code>s-alpha</code> through <code>s-hotel</code>.
 
-%p One off large font sizes to be used for hero, leader, or introduction sections. These extends only include a <code>font-size</code> and will require any desired <code>font-weight</code> or <code>line-height</code> separately.
+%p Our base <code>font-size</code> is <code>14</code> pixels and our base <code>line-height</code> is <code>24</code> pixels. Our <code>line-height</code>, and vertical spacing in general, should always a variable of <code>6</code> pixels. 
+
+%p Any <code>font-size</code> of <code>12</code> pixels and under will use the Helvetica Neue typeface, as seen within <code>s-golf</code> and <code>s-hotel</code>.
+
+%h5 Variables
+
+%p For the <code>font-size</code>, and size alone, variables may be used. Example: <code>$s-alpha</code>, <code>$s-bravo</code>, <code>$s-charlie</code>, and etc.
+
+%h5 Mixins &amp; Classes
+
+%p For a <code>font-size</code> and <code>line-height</code> combination mixins and classes may be used. Mixin example: <code>+s-alpha</code>, <code>+s-bravo</code>, <code>+s-charlie</code>, and etc. Class example: <code>.s-alpha</code>, <code>.s-bravo</code>, <code>.s-charlie</code>, and etc.
 
 %ul.sg-value-list.sg-type-scale
   %li.s-giga
@@ -16,12 +26,6 @@
   %li.s-mega
     Mega &ndash; 48px/54px
     %code.sg-value-offset .s-mega
-
-%p General font sizes used across all headings and default text. The base font size is <code>14</code> pixels. The scale includes a specified <code>line-height</code> for each given <code>font-size</code>, of which is always a variable of <code>6px</code>. Any <code>font-size</code> of <code>12px</code> and under will use the Helvetica Neue typeface.
-
-%p All scale extends begin with <code>.s-*</code>.
-
-%ul.sg-value-list.sg-type-scale
   %li.s-alpha
     Alpha &ndash; 36px/42px
     %code.sg-value-offset .s-alpha
@@ -49,9 +53,12 @@
 
 %h2 Headings
 
-%p Headings are extended off the scale and include a <code>margin-bottom</code> and the appropriate <code>font-weight</code>.
+%p Headings are based off the typographic scale and include a <code>margin-bottom</code> of <code>24</code> pixels and the appropriate <code>font-weight</code>.
 
-%p All heading extends begin with <code>.h-*</code>.
+%h5 Mixins &amp; Classes
+
+%p As with the general typographic scale, headings also have the approrpriate mixins and classes which start with <code>.h-*</code> instead of <code>.s-*</code> for scale. Mixin example: <code>+h-alpha</code>, <code>+h-bravo</code>, <code>+h-charlie</code>, and etc. Class example: <code>.h-alpha</code>, <code>.h-bravo</code>, <code>.h-charlie</code>, and etc.
+
 
 %h1.sg-heading
   Heading One &ndash; Book 36px/42px 
@@ -77,71 +84,54 @@
 
 %h2 Font Families
 
-%p There are two font families available, each of which include an extendable silent class <code>[%]</code>.
+%p There are three font families available, all of which include a variable.
 
 %ul.sg-value-list
   %li.sg-type-families-open-sans
     Open Sans &ndash; Open Sans, Verdana, Helvetica, sans-serif
-    %code.sg-value-offset %font-family-open-sans
+    %code.sg-value-offset $font-family-open-sans
   %li.sg-type-families-helvetica
     Helvetica Neue &ndash; Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif
-    %code.sg-value-offset %font-family-helvetica
+    %code.sg-value-offset $font-family-helvetica
   %li.sg-type-families-monospace
     Monospace &ndash; Source Code Pro, Inconsolata, Lucida Console, Terminal, Courier New, Courier
-    %code.sg-value-offset %font-family-monospace
+    %code.sg-value-offset $font-family-monospace
 
 -# ========================================
 -# Font weights
 
 %h2 Font Weights
 
-%p There are three font weights available, each of which include an extendable silent class <code>[%]</code>. There are however a few rules as to how these font weights may be paired with other styles. Open Sans may only appear as italic in a normal or bold weight. Source Code Pro should never appear in a book weight or as italic.
+%p There are three font weights available, and a few rules as to how these font weights may be paired with each font family. Open Sans may only appear as italic in a normal or bold weight, not book. Source Code Pro should never appear in a book weight or italic. Note: There aren&#8217;t any variables, mixins, or classes for these values. They must be used outright.
 
 %ul.sg-value-list
   %li.sg-type-weight-bold
-    Bold &ndash; 600
-    %code.sg-value-offset %font-weight-bold
+    Bold
+    %code.sg-value-offset 600
   %li.sg-type-weight-normal
-    Normal &ndash; 400
-    %code.sg-value-offset %font-weight-normal
+    Normal
+    %code.sg-value-offset 400
   %li.sg-type-weight-book
-    Book &ndash; 300
-    %code.sg-value-offset %font-weight-book
+    Book
+    %code.sg-value-offset 300
 
 -# ========================================
--# Line heights
+-# Utility colors
 
-%h2 Line Heights
+%h2 Utility Colors
 
-%p There are four line heights available, each of which included a variable <code>[$]</code> and an extendable silent class <code>[%]</code>. When using a line height outright please use the <code>@extend</code> rule, however should computation be needed feel free to use one of the variables.
-
-%p Please note, baselines are set in increments of <code>6px</code>, of which is available by the <code>$baseline-step</code> variable.
+%p Utility classes are available to change the <code>color</code> of text to common color values. Example: <code>.text-subtle</code>, <code>.text-success</code>, and etc.
 
 %ul.sg-value-list
-  %li.sg-type-height-small
-    Small &ndash; 18px
-    %code.sg-value-offset [$baseline-, %line-height-]small
-  %li.sg-type-height-base
-    Base &ndash; 24px
-    %code.sg-value-offset [$baseline-, %line-height-]base
-  %li.sg-type-height-large
-    Large &ndash; 30px
-    %code.sg-value-offset [$baseline-, %line-height-]large
-  %li.sg-type-height-xx-large
-    XX Large &ndash; 42px
-    %code.sg-value-offset [$baseline-, %line-height-]xx-large
-
--# ========================================
--# Miscellaneous
-
-%h2 Miscellaneous Type Styles
-
-%p Miscellaneous typography styles, all of which include an extendable silent class <code>[%]</code>.
-
-%ul.sg-value-list
-  %li
-    Center Text
-    %code.sg-value-offset %text-center
-  %li
-    Remove Text Decorations
-    %code.sg-value-offset %text-decoration-none
+  %li.text-subtle
+    Subtle &ndash; Gray
+    %code.sg-value-offset .text-subtle
+  %li.text-success
+    Success &ndash; Green
+    %code.sg-value-offset .text-success
+  %li.text-warning
+    Warning &ndash; Gold
+    %code.sg-value-offset .text-warning
+  %li.text-danger
+    Danger &ndash; Red
+    %code.sg-value-offset .text-danger
