@@ -4,7 +4,7 @@
 
 %p The grid may be divided into 12 columns.
 
-%p Each division comes with a set of classes <code>[.]</code> to identify the different widths. These classes may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
+%p Each division comes with a set of classes to identify the different widths.
 
 %p Using a class to define the width alone will not create a grid system. Rows, or multiple rows, need to be wrapped in an element with the <code>.grid</code> class and elements with the defined width need to include the <code>.grid-col</code> class. Take the following example:
 
@@ -240,80 +240,11 @@
     %code .grid-8-12
 
 -# ========================================
--# Alignments
-
-%h2 Alignments
-
-%p Extendable vertical alignment silent classes <code>[%]</code> may be used by way of the <code>@extend</code> rule.
-
-%ul.sg-value-list
-  %li
-    Bottom
-    %code.sg-value-offset %vertical-align-bottom
-  %li
-    Middle
-    %code.sg-value-offset %vertical-align-middle
-  %li
-    Top
-    %code.sg-value-offset %vertical-align-top
-
--# ========================================
--# Displays
-
-%h2 Displays
-
-%p Extendable display classes <code>[.]</code> which may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
-
-%ul.sg-value-list
-  %li
-    Block
-    %code.sg-value-offset .display-block
-  %li
-    Inline-block
-    %code.sg-value-offset .display-inline-block
-  %li
-    Table
-    %code.sg-value-offset .display-table
-  %li
-    Table-cell
-    %code.sg-value-offset .display-table-cell
-  %li
-    None
-    %code.sg-value-offset .display-none
-
--# ========================================
--# Positions
-
-%h2 Positions
-
-%p Extendable position classes <code>[.]</code> which may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
-
-%ul.sg-value-list
-  %li
-    Relative
-    %code.sg-value-offset .position-relative
-  %li
-    Absolute
-    %code.sg-value-offset .position-absolute
-  %li
-    Top &ndash; 0
-    %code.sg-value-offset .top-0
-  %li
-    Right &ndash; 0
-    %code.sg-value-offset .right-0
-  %li
-    Bottom &ndash; 0
-    %code.sg-value-offset .bottom-0
-  %li
-    Left &ndash; 0
-    %code.sg-value-offset .left-0
-
--# ========================================
 -# Floats
 
 %h2 Floats
 
-%p Extendable float classes <code>[.]</code> which may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
+%p Float classes may be used on an element directly, never extended.
 
 %ul.sg-value-list
   %li
@@ -322,125 +253,15 @@
   %li
     Right
     %code.sg-value-offset .pull-right
-  %li
-    None
-    %code.sg-value-offset .pull-none
 
 -# ========================================
 -# Clearfix
 
 %h2 Clearfix
 
-%p Extendable clearfix class <code>[.]</code> which may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
+%p A clearfix may be used as a mixin or class. Mixin example: <code>+group</code>. Class example: <code>.group</code>.
 
 %ul.sg-value-list
   %li
     Clearfix
     %code.sg-value-offset .group
-
--# ========================================
--# Margins
-
-%h2 Margins
-
-%p Extendable margin classes <code>[.]</code> which may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
-
-%ul.sg-value-list
-  %li
-    Margin &ndash; 0
-    %code.sg-value-offset .margin-0
-  %li
-    Margin &ndash; Top
-    %code.sg-value-offset .margin-top
-  %li
-    Margin &ndash; Right
-    %code.sg-value-offset .margin-right
-  %li
-    Margin &ndash; Bottom
-    %code.sg-value-offset .margin-bottom
-  %li
-    Margin &ndash; Left
-    %code.sg-value-offset .margin-left
-  %li
-    Margins &ndash; 0 top &amp; bottom, auto left &amp; right
-    %code.sg-value-offset .margin-auto
-
--# ========================================
--# Paddings
-
-%h2 Paddings
-
-%p Extendable padding classes <code>[.]</code> which may be used on an element directly or as an extend by way of the <code>@extend</code> rule.
-
-%ul.sg-value-list
-  %li
-    Padding &ndash; 0
-    %code.sg-value-offset .padding-0
-  %li
-    Padding &ndash; Top
-    %code.sg-value-offset .padding-top
-  %li
-    Padding &ndash; Right
-    %code.sg-value-offset .padding-right
-  %li
-    Padding &ndash; Bottom
-    %code.sg-value-offset .padding-bottom
-  %li
-    Padding &ndash; Left
-    %code.sg-value-offset .padding-left
-  %li
-    Gutter padding &ndash; Left &amp; right
-    %code.sg-value-offset .padding-gutters
-  %li
-    Half gutters padding &ndash; Left &amp; right
-    %code.sg-value-offset .padding-gutters-half
-  %li
-    Baseline padding &ndash; Top &amp; bottom
-    %code.sg-value-offset .padding-baselines
-  %li
-    Box padding &ndash; Top, right, bottom &amp; left
-    %code.sg-value-offset .padding-box
-
--# ========================================
--# Borders
-
-%h2 Borders
-
-%ul.sg-value-list
-  %li
-    Border &ndash; 0
-    %code.sg-value-offset .border-0
-  %li
-    Border &ndash; Gray Light
-    %code.sg-value-offset %border-gray-light
-  %li
-    Border &ndash; 1px
-    %code.sg-value-offset %border-1
-  %li
-    Border &ndash; Solid
-    %code.sg-value-offset %border-solid
-  %li
-    Border &ndash; 1px Solid Gray Light
-    %code.sg-value-offset %border-base
-  %li
-    Base border radius
-    %code.sg-value-offset %border-radius-base
-  %li
-    Mini border radius
-    %code.sg-value-offset %border-radius-mini
-  %li
-    Circle border radius
-    %code.sg-value-offset %border-radius-circle
-
--# ========================================
--# Misc
-
-%h2 Misc
-
-%ul.sg-value-list
-  %li
-    Image Replacement
-    %code.sg-value-offset .ir
-  %li
-    Box Overlay
-    %code.sg-value-offset .box-overlay
