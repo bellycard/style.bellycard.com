@@ -240,6 +240,47 @@
     %code .grid-8-12
 
 -# ========================================
+-# Baseline Grid
+%h2 Baseline Grid
+
+%p Baseline grids are a useful way to guide the vertical spacing of your design. At Belly we use multiples of 6 to create consistent vertical spacing throughout our layout. Below are some commonly used baseline variables. Please note, these variables should be used for vertical spacing only (i.e. height, padding-top, padding-bottom, margin-top, margin-bottom, and top). If you need to vertically space an element by more than the 42px, please multiply it by 6 using the $baseline-step variable. For example, ($baseline-step * 10).
+
+%pre
+  %code
+    :preserve
+      &#36;baseline-step:     6px;
+      &#36;baseline-x-small:  &#36;baseline-step * 2; // 12px
+      &#36;baseline-small:    &#36;baseline-step * 3; // 18px
+      &#36;baseline-base:     &#36;baseline-step * 4; // 24px
+      &#36;baseline-large:    &#36;baseline-step * 5; // 30px
+      &#36;baseline-x-large:  &#36;baseline-step * 6; // 36px
+      &#36;baseline-xx-large: &#36;baseline-step * 7; // 42px
+
+-# ========================================
+-# Gutters
+%h2 Gutters
+
+%p To manage horizontal spacing, use the aforementioned grid system or the gutter variables listed below. These variables are great for consitent horizontal spacing (i.e. width, padding-left, padding-right, margin-left, margin-right, right, left). It is perfectly OK to perform operations on these variables. For example, ($gutter * 2) or ($gutter-half / 3).
+
+%pre
+  %code
+    :preserve
+      &#36;gutter:      30px;
+      &#36;gutter-half: &#36;gutter / 2;
+
+-# ========================================
+-# Border Radius
+%h2 Border Radius
+
+%p For consistency, please use the following variables to manage border radius.
+
+%pre
+  %code
+    :preserve
+      &#36;border-radius-base: 6px;
+      &#36;border-radius-mini: 4px;
+
+-# ========================================
 -# Floats
 
 %h2 Floats
