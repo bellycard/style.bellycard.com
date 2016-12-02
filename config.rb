@@ -3,10 +3,10 @@
 ###
 
 # Change Compass configuration
-compass_config do |config|
-  # config.output_style = :compact
-  config.sass_options = {line_comments: false}
-end
+# compass_config do |config|
+#   # config.output_style = :compact
+#   config.sass_options = {line_comments: false}
+# end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -67,7 +67,7 @@ configure :build do
   activate :minify_javascript
 
   # Optmize images
-  activate :imageoptim
+  # activate :imageoptim #bundle  issues with middleman v4
 
   # GZip all the things
   activate :gzip
