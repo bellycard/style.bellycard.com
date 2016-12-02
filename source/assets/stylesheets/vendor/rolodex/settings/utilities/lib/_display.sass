@@ -1,0 +1,20 @@
+// Display
+// ========================================
+
+$displays: "block", "inline", "inline-block", "none", "table", "table-cell"
+
+@each $display in $displays
+
+  .d-#{$display}
+    display: #{$display}
+
+// Responsive display
+
+@each $name, $value in $breakpoints
+
+  @media (min-width: $value)
+
+    @each $display in $displays
+
+      .d-#{$display}-#{$name}
+        display: #{$display}
