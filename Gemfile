@@ -12,9 +12,6 @@ gem "middleman-minify-html"
 # Autoprefixer
 gem "middleman-autoprefixer"
 
-# Minification and optimization
-# gem "middleman-imageoptim" # issues with middleman v4
-
 # Belly style rolodex
 gem "rolodex", "2.0.2"
 
